@@ -1,0 +1,75 @@
+.title-box-2-wrapper {
+    color: black;
+    background-color: white;
+    width: inherit;
+}
+
+.hr {
+    border-bottom: 2px solid #e7e7e7;
+}
+
+.product {
+    vertical-align: top;
+    padding: 20px 0;
+    margin: 25px auto;
+}
+
+.product > div {
+    margin: 5px 0;
+    /*font-size: 18px;*/
+    font-weight: bold;
+}
+
+.product_image_div {
+    text-align: center;
+}
+
+.product_image {
+    width: 350px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px #999;
+    margin: 30px 5px;
+    padding:20px;
+}
+
+.product_category {
+    font-size: 20px; /*Allows "A Portable & Cheap Photoscanner" to fit in gmail iphone 6*/
+    font-weight: bold;
+    /*text-align: center;*/
+}
+
+.product_price {
+    /*color: #b12704;*/
+    color: #418c41;
+    font-weight: bold;
+}
+
+.product_qualifiers {
+    list-style: disc;
+    color: #888;
+}
+
+.product_qualifier {
+    color: #444;
+}
+
+
+@media only screen and (min-width: 500px) {
+    .body-wrapper {
+        max-width:500px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .body-wrapper {
+        width:100%;
+    }
+    .product_image {
+        width: 275px;
+    }
+    .product_image {
+        width: 80%;
+    }
+    body {
+        font-size: 15px;
+    }
+}
