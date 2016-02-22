@@ -20,8 +20,14 @@ def email():
 #     request.form['email']
 
 if __name__ == '__main__':
+    kwargs = {}
+
     if '--debug' in sys.argv:
-        kwargs = {'debug': True}
+        kwargs['debug'] = True
     else:
-        kwargs = {'host':'0.0.0.0', 'port':80}
+        kwargs['host'] = '0.0.0.0'
+
+    if '--port' in sys.argv:
+        kwargs['port'] = sys.argv[sys.argv.index('--port') + 1]
+
     app.run(**kwargs)

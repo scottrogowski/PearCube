@@ -1,2 +1,2 @@
-web: python pearcube/pearcube.py 
+web: python pearcube/pearcube.py --port $PORT
 
