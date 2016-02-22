@@ -23,5 +23,5 @@ if __name__ == '__main__':
     if '--debug' in sys.argv:
         kwargs = {'debug': True}
     else:
-        kwargs = {'host':'0.0.0.0'}
+        kwargs = {'host':'0.0.0.0', 'port':80}
     app.run(**kwargs)
