@@ -2,4 +2,5 @@
 venv
 *.pyc
 *.swp
-pearcube.sublime*
+pearcube.sublime-project
+pearcube.sublime-workspace

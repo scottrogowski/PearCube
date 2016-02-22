@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+
 from __future__ import unicode_literals
 import io
 from pybars import Compiler
@@ -7,7 +8,7 @@ from time import sleep
 
 handlebars_compiler = Compiler()
 
-def watch_file(fname, context):
+def watch_file(fname, context, debug):
     last_mod_time = 0
     while True:
         mod_time = os.stat(fname).st_mtime
@@ -16,15 +17,22 @@ def watch_file(fname, context):
             continue
         last_mod_time = mod_time
 
+        gen_template(fname, context, debug)
 
 
-        with io.open(fname, encoding='utf8') as f:
-            comparison_template = f.read()
-            template = handlebars_compiler.compile(comparison_template)
-            print template(context)
+def gen_template(fname, context, debug):
+    with io.open(fname, encoding='utf8') as f:
+        comparison_template = f.read()
+        template = handlebars_compiler.compile(comparison_template)
+        print template(context)
+        #TODO if debug use absolute paths
 
 if __name__ == "__main__":
     context = {
         "hello": "hello world"
     }
-    watch_file('comparison_content.handlebars', context)
+
+    if '--debug' in sys.argv:
+        watch_file('email.html', context, True)
+    else:
+        gen_template('email.html', context, False)
