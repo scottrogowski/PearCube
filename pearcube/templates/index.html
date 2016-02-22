@@ -21,11 +21,11 @@
         <div class='instructions'>
             Email us using the form below. We'll do the research, including reading articles, comparing brands, and sorting real from fake reviews.
             Then, we will email you what we think is the best option.
-            <a id='see-example-toggle' data-toggle="lightbox" href="#" onclick="show_examples(); return false;">
+            <a id='see-example-toggle' data-toggle="lightbox" href="#" onclick="return show_examples()">
               See an example
             </a>
         </div>
-          <form id="cs-form" action='/cs_request' method='post'>
+          <form id="cs-form" onsubmit="return send_cs_email()">
             <div id="cs-form-div">
               <textarea name='body' id="cs-form-ta" rows="8" placeholder="I am looking for..."></textarea>
               <div id="cs-form-row">
@@ -43,7 +43,7 @@
       <iframe src="/Example-Emails/Small-Cheap-Photo-Scanner"></iframe>
     </div>
   </div>
-
+  <script src='https://code.jquery.com/jquery-2.2.0.min.js'></script>
   <script src='/static/scripts/index.js'></script>
 </body>
 </html>

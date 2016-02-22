@@ -1,12 +1,10 @@
 #!/usr/bin/env python
 
-import sys
-
 from flask import Flask, request, render_template
-import sendgrid
 
-SENDGRID_USERNAME = 'app47702827@heroku.com'
-SENDGRID_PASSWORD = '7f2b7fc48527'
+from lib.options import options
+from lib.cs_emailer import cs_emailer
+
 
 app = Flask(__name__)
 
@@ -20,26 +18,11 @@ def email():
 
 @app.route('/cs_request', methods=['POST'])
 def cs_request():
-    sg = sendgrid.SendGridClient(SENDGRID_USERNAME, SENDGRID_PASSWORD)
-
-    message = sendgrid.Mail()
-    message.add_to('scottmrogowski@gmail.com')
-    message.set_subject('test2')
-    message.set_text('Body')
-    message.set_from('scott@pearcube.com')
-    status, msg = sg.send(message)
-
-    return ','.join(["POST", request.form.get('body',''), request.form.get('email_address',''), str(status), str(message)])
+    return cs_emailer(request.form)
 
 if __name__ == '__main__':
-    kwargs = {}
+    options.parse_command_line()
 
-    if '--debug' in sys.argv:
-        kwargs['debug'] = True
-    else:
-        kwargs['host'] = '0.0.0.0'
-
-    if '--port' in sys.argv:
-        kwargs['port'] = sys.argv[sys.argv.index('--port') + 1]
-
-    app.run(**kwargs)
+    app.run(debug = options.DEBUG,
+            host = options.HOST,
+            port = options.PORT)
