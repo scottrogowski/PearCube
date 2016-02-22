@@ -24,12 +24,12 @@ def cs_request():
 
     message = sendgrid.Mail()
     message.add_to('scottmrogowski@gmail.com')
-    message.set_subject('test')
+    message.set_subject('test2')
     message.set_text('Body')
     message.set_from('scott@pearcube.com')
     status, msg = sg.send(message)
 
-    return ','.join(["POST", request.form.get('body',''), request.form.get('email_address','')])
+    return ','.join(["POST", request.form.get('body',''), request.form.get('email_address',''), str(status), str(message)])
 
 if __name__ == '__main__':
     kwargs = {}
