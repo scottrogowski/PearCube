@@ -16,7 +16,7 @@ class Options(object):
             self.LIVE_EMAILING = True
 
         if '--port' in sys.argv:
-            self.PORT = sys.argv[sys.argv.index('--port') + 1]
+            self.PORT = int(sys.argv[sys.argv.index('--port') + 1])
 
         if '--host' in sys.argv:
             self.HOST = sys.argv[sys.argv.index('--host') + 1]
