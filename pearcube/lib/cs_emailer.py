@@ -2,9 +2,8 @@ import sendgrid
 from validate_email import validate_email
 
 from lib.options import options
+from lib.secrets import SENDGRID_USERNAME, SENDGRID_PASSWORD
 
-SENDGRID_USERNAME = 'app47702827@heroku.com'
-SENDGRID_PASSWORD = '7f2b7fc48527'
 sg_singleton = sendgrid.SendGridClient(SENDGRID_USERNAME, SENDGRID_PASSWORD)
 
 def cs_emailer(form):
