@@ -11,6 +11,10 @@ h1,h2,h3{
     line-height: 1.2em;
     }
 
+.title-box-2-wrapper {
+    background-color: #333;
+}
+
 .question {
     font-size: 40px;
     line-height: 1.2em;
@@ -150,6 +154,11 @@ h1,h2,h3{
     #cs-form-div {
         font-size: 15px;
     }
+
+    .content-div-wrapper {
+        padding: 0 10px;
+    }
+
 }
 
 #lightbox-overlay{
