@@ -10,8 +10,7 @@ class Options(object):
     def parse_command_line(self):
         # TODO this function sucks
 
-        if '--debug' not in sys.argv:
-            self.PORT = 80
+        if '--prod' in sys.argv:
             self.HOST = '0.0.0.0'
             self.LIVE_EMAILING = True
 

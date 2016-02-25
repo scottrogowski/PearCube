@@ -14,7 +14,7 @@ def index_page():
 
 @app.route('/Example-Emails/Small-Cheap-Photo-Scanner')
 def email():
-    return render_template('email.html')
+    return render_template('product_landing.html')
 
 @app.route('/cs_request', methods=['POST'])
 def cs_request():
