@@ -3,7 +3,7 @@ import sys
 class Options(object):
     def __init__(self):
         self.DEBUG = True
-        self.PORT = 8000
+        self.PORT = 8888
         self.HOST = '127.0.0.1'
         self.LIVE_EMAILING = False
 
