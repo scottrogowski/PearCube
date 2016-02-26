@@ -31,11 +31,16 @@
           </form>
     </div></div>
 
-  <div id="lightbox-overlay" onclick="hide_lightbox()">
-    <div id="lightbox-content">
+  <div class="lightbox-overlay" onclick="hide_lightbox()">
+    <div class='lightbox-content' id='example-popup'>
       <iframe src="/Example-Emails/Small-Cheap-Photo-Scanner"></iframe>
     </div>
+    <div class='lightbox-content' id='clock-popup'>
+      <div id='clock-popup__thanks'>Thanks!</div>
+      <div id='clock-popup__message'>We'll get back to you within 24 hours</div>
+    </div>
   </div>
+
   <script src='https://code.jquery.com/jquery-2.2.0.min.js'></script>
   <script src='/static/scripts/index.js'></script>
 {% endblock %}

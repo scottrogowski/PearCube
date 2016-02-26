@@ -2,14 +2,16 @@ function is_mobile() {
     return window.innerWidth < 600;
 }
 
-function show_lightbox() {
-     document.getElementById('lightbox-overlay').style.display='flex';
-     document.getElementById('lightbox-content').style.display='block';
+function show_lightbox(lightbox_id) {
+    console.log(lightbox_id)
+    console.log($(lightbox_id))
+    $('.lightbox-overlay').css('display','flex');
+    $(lightbox_id).css('display','block');
 }
 
 function hide_lightbox() {
-     document.getElementById('lightbox-overlay').style.display='none';
-     document.getElementById('lightbox-content').style.display='none';
+    $('.lightbox-overlay').hide();
+    $('.lightbox-content').hide();
 }
 
 function show_examples() {
@@ -17,7 +19,7 @@ function show_examples() {
         window.location.replace('/Example-Emails/Small-Cheap-Photo-Scanner');
     }
     else {
-        show_lightbox();
+        show_lightbox('#example-popup');
     }
 
     return false;
@@ -41,7 +43,7 @@ function send_cs_email() {
         type: 'POST',
         data : $('#cs-form').serialize(),
         success: function(resp) {
-            alert("Thanks! We'll get back to you as soon as we can");
+            show_lightbox("#clock-popup")
         },
         error: function(xhr, status, error) {
             alert(error)
