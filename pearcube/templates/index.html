@@ -10,25 +10,33 @@
     <div class='title-box-2-wrapper'><div class='title-box-2'><img class='logo-2' src='/static/images/peach_logo_green_thick.svg'><span>PearCube</span></div></div>
 
     <div class='content-div-wrapper'><div class='content-div'>
-        <div class='question'>Need to buy something online? Overwhelmed by the choices?</div>
-        <div class='instructions'>
-            Email us using the form below. We'll do the research, including reading articles, comparing brands, and sorting real from fake reviews.
-            Then, we will email you what we think is the best option.
-            <a id='see-example-toggle' data-toggle="lightbox" href="#" onclick="return show_examples()">
+        <div class='lead'>Online shopping is overwhelming.</div>
+        <div class='sub-lead'>We can help.</div>
+        <div class='left-content'>
+          <ul class='instructions'>
+            <li class='instruction'>Let us know what you're looking for</li>
+            <li class='instruction'>We’ll do the research and respond via email within 24 hours</li>
+            <li class='instruction'>
+              <a id='see-example-toggle' data-toggle="lightbox" href="#" onclick="return show_examples()">
               See an example
-            </a>
-        </div>
-          <form id="cs-form" onsubmit="return send_cs_email()">
-            <div id="cs-form-div">
-              <textarea name='body' id="cs-form-ta" rows="2" placeholder="I am looking for..."></textarea>
-              <div id="cs-form-row">
-                <input type="text" name='email_address' id="cs-form-in" placeholder="Email">
-                <span id="cs-form-btn-span">
-                  <button id="cs-form-btn" type="submit">Send</button>
-                </span>
+              </a>
+            </li>
+          </ul>
+            <form id="cs-form" onsubmit="return send_cs_email()">
+              <div id="cs-form-div">
+                <textarea name='body' id="cs-form-ta" placeholder="I am looking for..."></textarea>
+                <div id="cs-form-row">
+                  <input type="text" name='email_address' id="cs-form-in" placeholder="Email">
+                  <span id="cs-form-btn-span">
+                    <button id="cs-form-btn" type="submit">Send</button>
+                  </span>
+                </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
+          <div class='right-content'>
+            <img src='/static/images/birdpackage2.png'>
+          </div>
     </div></div>
 
   <div class="lightbox-overlay" onclick="hide_lightbox()">
