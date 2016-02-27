@@ -16,7 +16,7 @@ function hide_lightbox() {
 
 function show_examples() {
     if (is_mobile()) {
-        window.location.replace('/Example-Emails/Small-Cheap-Photo-Scanner');
+        window.location.assign('/Example-Emails/Small-Cheap-Photo-Scanner');
     }
     else {
         show_lightbox('#example-popup');

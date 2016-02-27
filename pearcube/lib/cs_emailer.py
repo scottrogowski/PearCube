@@ -1,4 +1,5 @@
 import sendgrid
+import json
 from validate_email import validate_email
 
 from lib.options import options

@@ -20,7 +20,7 @@ class Options(object):
         if '--host' in sys.argv:
             self.HOST = sys.argv[sys.argv.index('--host') + 1]
 
-        if '--live_emailing' in sys.argv:
+        if '--live-emailing' in sys.argv:
             self.LIVE_EMAILING = True
 
 
