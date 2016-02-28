@@ -52,6 +52,20 @@
     color: #444;
 }
 
+.buy-button-wrapper {
+    display: flex;
+}
+
+.buy-button {
+    font-size: 30px;
+    background-color: #8BB562;
+    border-radius: 5px;
+    margin: 0 auto;
+    appearance: button;
+    cursor: pointer;
+    color: #333;
+}
+
 
 @media only screen and (min-width: 500px) {
     .content-div-wrapper {

@@ -38,7 +38,9 @@ h1,h2,h3{
     margin-top: 70px;
     font-size: 18px;
     line-height: 1.6em;
-    margin-left: -18px;
+    margin-left: -35px;
+    list-style: none;
+    font-weight: bold;
 }
 
 .instruction {
@@ -80,7 +82,8 @@ h1,h2,h3{
 .content-div {
     width:750px;
     margin: 0 auto;
-    color: #102b50;
+    /*color: #102b50;*/
+    color: #444;
 }
 
 .left-content {
@@ -260,6 +263,7 @@ h1,h2,h3{
     .instructions {
         margin-top: 20px;
         font-size: 16px;
+        font-weight: bold;
     }
 
     .left-content {

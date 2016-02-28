@@ -31,6 +31,10 @@ p {
     text-decoration: underline;
 }
 
+.nowrap {
+    white-space: nowrap;
+}
+
 @font-face {
   font-family: 'Raleway';
   src: url('/static/Raleway-Medium.ttf');
@@ -50,7 +54,7 @@ p {
     vertical-align: top;
     margin: 5px auto 0;
     /*padding: 30px;*/
-    max-width:850px;
+    max-width:750px;
 }
 
 .title-box-2 span {
