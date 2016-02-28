@@ -41,6 +41,8 @@ def send_results_email():
         subject = 'PearCube - Small & Portable Photo Scanner',
         html = html)
 
-    status, msg = sg_singleton.send(msg)
+    if options.LIVE_EMAILING:
+        status, msg = sg_singleton.send(msg)
+        return msg, status
 
-    return msg, status
+    return html, 200

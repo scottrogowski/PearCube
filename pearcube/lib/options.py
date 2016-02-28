@@ -13,6 +13,10 @@ class Options(object):
         if '--prod' in sys.argv:
             self.HOST = '0.0.0.0'
             self.LIVE_EMAILING = True
+            self.DEBUG = False
+
+        if '--nodebug' in sys.argv:
+            self.DEBUG = False
 
         if '--port' in sys.argv:
             self.PORT = int(sys.argv[sys.argv.index('--port') + 1])

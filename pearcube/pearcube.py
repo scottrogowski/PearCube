@@ -8,6 +8,17 @@ from lib.cs_emailer import send_request_email, send_results_email
 
 app = Flask(__name__)
 
+@app.context_processor
+def inject_port():
+    return dict(port=options.PORT)
+
+@app.template_filter('absolutify')
+def absolutify_filter(path):
+	if options.LIVE_EMAILING:
+	    return "http://www.pearcube.com" + path
+	else:
+		return path
+
 @app.route('/')
 def index_page():
     return render_template('index.html')
