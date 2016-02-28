@@ -1,15 +1,15 @@
-{% extends "_base.html" %}
-
-{% block head %}
-	<style>
-		{% include "static/styles/css.css" %}
-		{% include "static/styles/product.css" %}
-	</style>
-{% endblock head %}
-{% block body %}
+<style>
+	{% include "static/styles/css.css" %}
+	.content-div-wrapper {
+        max-width:500px;
+    }
+	body {
+		background-color: white;
+	}
+</style>
 <div class='content-div-wrapper'>
 
-    <div class='title-box-2-wrapper hr'><div class='title-box-2'><a href='http://www.pearcube.com' onclick='window.top.location.href="http://www.pearcube.com"; return false'><img class='logo-2' src='http://www.pearcube.com/static/images/peach_logo_green_thick.svg'><span>PearCube</span></a></div></div>
+    <div class='title-box-2-wrapper hr'><div class='title-box-2'><a href='http://www.pearcube.com' onclick='window.top.location.href="http://www.pearcube.com"; return false'><img class='logo-2' src='http://www.pearcube.com/static/images/whitelogo.png'></a></div></div>
 
 	    <p>
 	    Hi Michaela,
@@ -19,7 +19,7 @@
 	    I understand that you are looking for an inexpensive portable photo scanner that is not very complicated. After researching the options, I think I found one
 	    that might work for you. Click below to see details</p>
 	    <p>
-	    <a href='http://www.pearcube.com/Small-And-Cheap-Photo-Scanner' class='link'>http://www.pearcube.com/Small-And-Cheap-Photo-Scanner</a>
+	    <a href='http://www.pearcube.com/Portable-And-Cheap-Photo-Scanner' class='link'>http://www.pearcube.com/Small-And-Cheap-Photo-Scanner</a>
 	    </p>
 
     <p>
@@ -30,10 +30,6 @@
     Also, please share any other thoughts or ideas about <a href='http://www.pearcube.com'>pearcube.com</a>. Your feedback is not just welcome, it is extremely helpful to me. 
     </p>
 
-    <p>Thanks!</p>
-    <p>Scott</p>
+    <p>Thanks!<br>Scott</p>
 
 </div>
-{% endblock %}
-
-{% block jquery %}{% endblock %}

@@ -1,6 +1,9 @@
-import sendgrid
 import json
+
+import sendgrid
 from validate_email import validate_email
+from flask import render_template
+import premailer
 
 from lib.options import options
 from lib.secrets import SENDGRID_USERNAME, SENDGRID_PASSWORD
@@ -27,3 +30,17 @@ def send_request_email(form):
         return json.dumps(msg), status
 
     return ','.join([email, body]), 200
+
+def send_results_email():
+    html = render_template("email.html")
+    html = premailer.transform(html)
+
+    msg = sendgrid.Mail(
+        from_email = "scottmrogowski@gmail.com",
+        to = 'scottmrogowski@gmail.com',
+        subject = 'PearCube - Small & Portable Photo Scanner',
+        html = html)
+
+    status, msg = sg_singleton.send(msg)
+
+    return msg, status

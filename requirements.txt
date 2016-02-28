@@ -1,4 +1,6 @@
 appnope==0.1.0
+cssselect==0.9.1
+cssutils==1.0.1
 decorator==4.0.9
 Flask==0.10.1
 gnureadline==6.3.3
@@ -8,10 +10,12 @@ ipython==4.1.1
 ipython-genutils==0.1.0
 itsdangerous==0.24
 Jinja2==2.8
+lxml==3.5.0
 MarkupSafe==0.23
 path.py==8.1.2
 pexpect==4.0.1
 pickleshare==0.6
+premailer==2.9.7
 ptyprocess==0.5.1
 sendgrid==1.6.22
 simplegeneric==0.8.1

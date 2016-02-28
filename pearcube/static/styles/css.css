@@ -67,6 +67,15 @@ p {
     bottom: -3px;
 }
 
+.title-box-2-wrapper {
+    color: black;
+    width: inherit;
+}
+
+.hr {
+    border-bottom: 2px solid #e7e7e7;
+}
+
 
 @media only screen and (min-width: 600px) {
 
