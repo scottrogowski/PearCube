@@ -16,7 +16,7 @@ function hide_lightbox() {
 
 function show_examples() {
     if (is_mobile()) {
-        window.location.assign('/Example-Emails/Small-Cheap-Photo-Scanner');
+        window.location.assign('/Portable-And-Cheap-Photo-Scanner');
     }
     else {
         show_lightbox('#example-popup');
@@ -46,7 +46,8 @@ function send_cs_email() {
             show_lightbox("#clock-popup")
         },
         error: function(xhr, status, error) {
-            alert(error)
+            console.log(xhr, status, error)
+            alert("Sorry. There was a problem. Please try again later")
         }
     });
     event.preventDefault()

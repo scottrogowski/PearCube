@@ -26,6 +26,10 @@ p {
     width: 100%;
 }
 
+.link:link, .link:visited {
+    color: inherit;
+    text-decoration: underline;
+}
 
 @font-face {
   font-family: 'Raleway';

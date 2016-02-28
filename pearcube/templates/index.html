@@ -1,9 +1,9 @@
 {% extends "_base.html" %}
 
 {% block head %}
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel='stylesheet' href='/static/styles/index_style.css'>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <link rel='stylesheet' href='/static/styles/css.css'>
+   <link rel='stylesheet' href='/static/styles/index_style.css'>
 {% endblock %}
 
 {% block body %}
@@ -18,7 +18,7 @@
             <li class='instruction'>Let us know what you're looking for</li>
             <li class='instruction'>We’ll do the research and respond via email within 24 hours</li>
             <li class='instruction'>
-              <a id='see-example-toggle' data-toggle="lightbox" href="#" onclick="return show_examples()">
+              <a id='see-example-toggle' class='link' data-toggle="lightbox" href="#" onclick="return show_examples()">
               See an example
               </a>
             </li>
@@ -44,7 +44,7 @@
 
   <div class="lightbox-overlay" onclick="hide_lightbox()">
     <div class='lightbox-content' id='example-popup'>
-      <iframe src="/Example-Emails/Small-Cheap-Photo-Scanner"></iframe>
+      <iframe src="/Portable-And-Cheap-Photo-Scanner"></iframe>
     </div>
     <div class='lightbox-content' id='clock-popup'>
       <div id='clock-popup__thanks'>Thanks!</div>

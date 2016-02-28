@@ -7,7 +7,7 @@ from lib.secrets import SENDGRID_USERNAME, SENDGRID_PASSWORD
 
 sg_singleton = sendgrid.SendGridClient(SENDGRID_USERNAME, SENDGRID_PASSWORD)
 
-def cs_emailer(form):
+def send_request_email(form):
     email = form.get('email_address','')
     body = form.get('body', '')
     if not validate_email(email):
