@@ -52,7 +52,7 @@
     color: #444;
 }
 
-.buy-button-wrapper {
+.product .buy-button-wrapper {
     display: flex;
     margin-top: 50px;
 }
@@ -65,6 +65,7 @@
     appearance: button;
     cursor: pointer;
     color: #333;
+    padding: 10px;
 }
 
 

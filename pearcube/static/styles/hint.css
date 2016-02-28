@@ -40,7 +40,7 @@
     transform: translate3d(0, 0, 0);
     visibility: hidden;
     opacity: 0;
-    z-index: 1000000;
+    z-index: 1000000; 
     pointer-events: none;
     -webkit-transition: 0.3s ease;
     -moz-transition: 0.3s ease;
