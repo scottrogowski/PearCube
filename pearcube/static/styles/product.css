@@ -54,6 +54,7 @@
 
 .buy-button-wrapper {
     display: flex;
+    margin-top: 50px;
 }
 
 .buy-button {
