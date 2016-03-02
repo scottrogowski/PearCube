@@ -37,7 +37,7 @@ def send_results_email():
 
     msg = sendgrid.Mail(
         from_email = "scottmrogowski@gmail.com",
-        to = 'scottmrogowski@gmail.com',
+        to = 'michaelagcordes@yahoo.com',
         subject = 'PearCube - Small & Portable Photo Scanner',
         html = html)
 
