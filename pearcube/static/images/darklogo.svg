@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="142" height="30" viewBox="0, 0, 142, 30">
+  <g id="Layer_1">
+    <text transform="matrix(1, 0, 0, 1, 84.524, 15.5)">
+      <tspan x="-55.524" y="8" font-family="Raleway-Medium" font-size="24" fill="#FFFFFF">PearCube</tspan>
+    </text>
+    <path d="M12.35,12.053 L3.2,8.842" fill-opacity="0" stroke="#8BB562" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M21.5,8.842 L12.35,12.053" fill-opacity="0" stroke="#8BB562" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <g>
+      <path d="M12.35,12.053 L21.5,8.842 L21.5,22.487 L12.35,26.5 L12.35,12.053 z" fill-opacity="0" stroke="#8BB562" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M12.35,12.053 L21.5,8.842 L21.5,22.487 L12.35,26.5 L12.35,12.053 z" fill-opacity="0" stroke="#8BB562" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g>
+      <path d="M12.35,12.053 L3.2,8.842 L3.2,22.487 L12.35,26.5 L12.35,12.053 z" fill-opacity="0" stroke="#8BB562" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M12.35,12.053 L3.2,8.842 L3.2,22.487 L12.35,26.5 L12.35,12.053 z" fill-opacity="0" stroke="#8BB562" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g>
+      <path d="M3.2,8.842 L12.781,6.01 L21.5,8.842 L12.35,12.053 L3.2,8.842 z" fill-opacity="0" stroke="#8BB562" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M3.2,8.842 L12.781,6.01 L21.5,8.842 L12.35,12.053 L3.2,8.842 z" fill-opacity="0" stroke="#8BB562" stroke-width="2" stroke-linejoin="round"/>
+    </g>
+    <path d="M12.35,8.842 C12.35,5.207 13.644,2.261 15.239,2.261" fill-opacity="0" stroke="#8BB562" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <g>
+      <path d="M15.32,3.866 C14.832,3.866 14.437,3.471 14.437,2.983 C14.437,2.495 14.832,2.1 15.32,2.1 C15.808,2.1 16.203,2.495 16.203,2.983 C16.203,3.471 15.808,3.866 15.32,3.866 z" fill-opacity="0" stroke="#8BB562" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M15.32,3.866 C14.832,3.866 14.437,3.471 14.437,2.983 C14.437,2.495 14.832,2.1 15.32,2.1 C15.808,2.1 16.203,2.495 16.203,2.983 C16.203,3.471 15.808,3.866 15.32,3.866 z" fill-opacity="0" stroke="#8BB562" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+  <g id="Layer_2"/>
+</svg>
