@@ -1,3 +1,8 @@
+.title-box-2-wrapper {
+    color: black;
+    width: inherit;
+}
+
 .product {
     vertical-align: top;
     padding: 20px 0;
@@ -58,6 +63,17 @@
     color: #333;
     padding: 10px;
 }
+
+#info-popup {
+    width: 100%;
+    font-size: 18px;
+    padding: 15px;
+}
+
+.info-question {
+    font-weight: bold;
+}
+
 
 
 @media only screen and (min-width: 500px) {

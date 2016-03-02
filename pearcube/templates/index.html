@@ -8,9 +8,10 @@
 
 {% block body %}
   <div class='page-wrapper'>
-    <div class='title-box-2-wrapper'><div class='title-box-2'><img class='logo-2' src='/static/images/peach_logo_green_thick.svg'><span>PearCube</span></div></div>
+    <div class='title-box-2-wrapper'><div class='title-box-2'><img src='/static/images/darklogo.svg'></div></div>
 
-    <div class='content-div-wrapper'><div class='content-div'>
+    <div class='content-div-wrapper'>
+      <div class='content-div'>
         <div class='lead'>Online shopping is overwhelming.</div>
         <div class='sub-lead'>We can help.</div>
         <div class='left-content'>
@@ -19,27 +20,27 @@
             <li class='instruction'>We’ll do the research and respond via email within 24 hours</li>
             <li class='instruction'>
               <a id='see-example-toggle' class='link' data-toggle="lightbox" href="#" onclick="return show_examples()">
-              See an example
+              See some examples
               </a>
-            </li>
+            </li>          
           </ul>
-            <form id="cs-form" onsubmit="return send_cs_email()">
-              <div id="cs-form-div">
-                <textarea name='body' id="cs-form-ta" placeholder="I am looking for..."></textarea>
-                <div id="cs-form-row">
-                  <input type="text" name='email_address' id="cs-form-in" placeholder="Email">
-                  <span id="cs-form-btn-span">
-                    <button id="cs-form-btn" type="submit">Send</button>
-                  </span>
-                </div>
+          <form id="cs-form" onsubmit="return send_cs_email()">
+            <div id="cs-form-div">
+              <textarea name='body' id="cs-form-ta" placeholder="I am looking for..."></textarea>
+              <div id="cs-form-row">
+                <input type="text" name='email_address' id="cs-form-in" placeholder="Email">
+                <span id="cs-form-btn-span">
+                  <button id="cs-form-btn" type="submit">Send</button>
+                </span>
               </div>
-            </form>
-          </div>
-          <div class='right-content'>
-            <img src='/static/images/birdpackage2.png'>
-          </div>
-    </div></div>
-    <!-- <div class='bottom-filler'><div style='flex:1'></div></div> -->
+            </div>
+          </form>
+        </div>
+        <div class='right-content'>
+          <img src='/static/images/birdpackage2.png'>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="lightbox-overlay" onclick="hide_lightbox()">
@@ -48,12 +49,13 @@
     </div>
     <div class='lightbox-content' id='clock-popup'>
       <div id='clock-popup__thanks'>Thanks!</div>
-      <div id='clock-popup__message'>We'll get back to you within 24 hours</div>
+      <div id='clock-popup__message'>We've sent you a confirmation email and we'll try to get back to you within 24 hours</div>
     </div>
   </div>
 
 {% endblock %}
 
 {% block scripts %}
+  <script src='/static/scripts/js.js'></script>
   <script src='/static/scripts/index.js'></script>
 {% endblock %}
