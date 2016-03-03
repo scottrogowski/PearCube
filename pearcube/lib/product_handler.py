@@ -26,10 +26,10 @@ def sync_mongo_with_flatfile():
                 )
         except pymongo.errors.OperationFailure, e:
             print "mongo update failure"
-            print force_ascii(e)
+            print e.code
+            print force_ascii(e.details)
 
 def render_product_page(dest):
-    print dest
     db = get_db()
     res = db.products.find_one({'page_url': dest})
     if res:
