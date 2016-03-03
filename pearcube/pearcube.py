@@ -8,7 +8,7 @@ import premailer
 
 from lib.options import options
 from lib.cs_emailer import send_request_email, send_results_email
-from lib.product_handler import render_product_page
+from lib.product_handler import render_product_page, sync_mongo_with_flatfile
 
 app = Flask(__name__)
 
@@ -67,7 +67,7 @@ def send_debug_email():
 
 if __name__ == '__main__':
     options.parse_command_line()
-
+    sync_mongo_with_flatfile()
     app.run(debug = options.DEBUG,
             host = options.HOST,
             port = options.PORT)
