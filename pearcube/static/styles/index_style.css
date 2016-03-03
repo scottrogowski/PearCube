@@ -183,10 +183,12 @@ h1,h2,h3{
     background-color: #8BB562;
 }
 
-/*.form-problems {
-    background-color: pink;
+.form-problems {
+    /*background-color: pink;*/
+    box-shadow: inset 0 0 10px red!important;
+    /*border: 2px solid red!important;*/
 }
-*/
+
 #example-popup {
     width:80%;
     max-width:650px;
