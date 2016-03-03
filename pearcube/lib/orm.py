@@ -14,8 +14,8 @@ def connect_to_mongo():
             print "Connected successfully to mongo debug"
         else:
             # uri = "mongodb://%s:%s@ds019658.mlab.com:19658/heroku_2wzxbwzm" % (MLAB_USERNAME, MLAB_PASSWORD)
-            uri = "mongodb://who:slapchop123@ds019698.mlab.com:19698/heroku_gcxjklhr"
-            # uri = os.environ['MONGOLAB_URI']
+            # uri = "mongodb://who:slapchop123@ds019698.mlab.com:19698/heroku_gcxjklhr"
+            uri = os.environ['MONGOLAB_URI']
             client = pymongo.MongoClient(uri)
             print "Connected successfully to mongo prod"
     except pymongo.errors.ConnectionFailure, e:

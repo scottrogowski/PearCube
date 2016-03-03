@@ -19,7 +19,7 @@ def sync_mongo_with_flatfile():
     flat_json = load_flatfile()
     for product_json in flat_json:
         try:
-            db.products.update_one(
+            db.products.update(
                 {'page_url': product_json['page_url']},
                 {'$set': product_json},
                 upsert = True
