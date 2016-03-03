@@ -5,9 +5,12 @@ import pymongo
 from flask import render_template, abort
 
 from orm import get_db
+from utils import absolute_path
 
 def load_flatfile():
-    with open('data/db.json') as flatfile:
+    absolute = absolute_path('data/db.json')
+    print absolute
+    with open(absolute) as flatfile:
         return json.load(flatfile)
 
 def sync_mongo_with_flatfile():
