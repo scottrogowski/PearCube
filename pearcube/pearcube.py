@@ -40,6 +40,10 @@ def link_repl(matchobj):
 def linkify_filter(string):
     return LINKIFY_RE.sub(link_repl, string)
 
+@app.template_filter('format_price')
+def format_price_filter(price_float):
+    return "$%.2f" % price_float
+
 @app.route('/')
 def index_page():
     return render_template('index.html')
