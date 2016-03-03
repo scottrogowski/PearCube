@@ -14,4 +14,14 @@ def absolute_path(path_from_base):
     return base_dir + '/' + path_from_base
 
 def force_ascii(uni):
-    return uni.encode('ascii', 'ignore')
+    try:
+        uni = unicode(uni)
+    except:
+        print "error forcing unicode"
+        return uni
+    try:
+        return uni.encode('ascii', 'ignore')
+    except:
+        print "error forcing ascii"
+        return uni
+
