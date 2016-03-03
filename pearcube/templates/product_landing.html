@@ -1,5 +1,19 @@
 {% extends "_base.html" %}
 
+{% macro feature_list(features) -%}
+    {% for f in features %}
+        <li class='product_qualifier'>
+            {{f.feature | linkify | safe}}
+            {% if f.tooltip %}
+                <span class="tip" data-question="{{f.tooltip.title}}" data-tip="{{f.tooltip.tip}}">
+                  <i class="fa fa-question-circle"></i>
+                </span>
+            {%endif%}         
+        </li>           
+    {% endfor %}
+{%- endmacro %}
+
+
 {% block title %} Portable And Cheap Photo Scanner {% endblock %}
 
 {% block head %}
@@ -13,32 +27,25 @@
 {% block body %}
     <div class='content-div-wrapper'>
 
-    <div class='title-box-2-wrapper hr'><div class='title-box-2'><a href='/' onclick='window.top.location.href="/"; return false'><img class='logo-2' src='/static/images/peach_logo_green_thick.svg'><span>PearCube</span></a></div></div>
+    <div class='title-box-2-wrapper hr'><div class='title-box-2'><a href='{{ "/" | absolutify }}'><img class='logo-2' src='{{ "/static/images/whitelogo.png" | absolutify }}'></a></div></div>
 
     <div class='product-wrapper'>
         <div class='product' id='sha'>
-            <div class='product_category'>A Portable &amp; Cheap Photo Scanner</div>
+            <div class='product_category'>{{title_category}}</div>
             <div class='product_image_div'>
-                <a href='http://www.amazon.com/Fujitsu-SCANSNAP-S1100i-600DPI-SCANNER/dp/B00Q8IN9GA'><img class='product_image' src='/static/product_imgs/scansnap.jpg'></a>
+                <a href='{{buy_link}}'><img class='product_image' src='/static/product_imgs/{{images[0]}}'></a>
             </div>
-            <div class='product_header_text'><a href='http://www.amazon.com/Fujitsu-SCANSNAP-S1100i-600DPI-SCANNER/dp/B00Q8IN9GA'>Fujitsu SCANSNAP - <span class='product_price'>$96 from amazon</span></a></div>
+            <div class='product_header_text'><a href='{{buy_link}}'>{{manufacturer}} {{name}} - <span class='product_price'>${{price}} from amazon</span></a></div>
             <div>Features</div>
             <ul class='product_qualifiers'>
-                <li class='product_qualifier'>Scans both regular (4x6) and full-size (8&#189;x11) photos</li>
-                <li class='product_qualifier'>600 dpi (dots per inch resolution) <span class="tip" data-question="What is DPI?" data-tip="DPIs range from 300 to 4800 or higher. Despite falling at the lower range, for almost everyone, this will be enough. For comparison, 300 DPI is the resolution that most magazines are printed at. The retina display of an iPhone, designed so that you can't see individual pixels, is only around the equivalent of 320 DPI."><i class="fa fa-question-circle"></i></span></li>
-                <li class='product_qualifier'>Transfer via USB or wifi</li>
-                <li class='product_qualifier'>Scans in 5 seconds</li>
-                <li class='product_qualifier'>Single sided scanning</li>
+                {{feature_list(features)}}
             </ul>
-            <div class='why-best'>Why is this the best portable &amp; cheap scanner?</div>
+            <div class='why-best'>Why is this the best {{regular_speak}}?</div>
             <ul class='product_qualifiers'>
-                <li class='product_qualifier'>It gets 4.8/5 stars with 120 reviews. <span class="tip" data-question="Why are you mentioning the reviews?" data-tip="We only include reviews if almost all of them appear to be real"><i class="fa fa-question-circle"></i></span></li></li>
-                <li class='product_qualifier'>It has 2x the DPI of the best-seller <a class='link' href='http://www.amazon.com/Doxie-One-Standalone-Portable-Document/dp/B008ASBFM6'>Doxie One</a> while being $30 cheaper</li>
-                <li class='product_qualifier'>It was recommended by <a class='link' href='http://thewirecutter.com/reviews/best-portable-document-scanner/'>this article</a>
-                </li>
+                {{feature_list(why_best)}}
             </ul>
             <div class='buy-button-wrapper'>
-                <button onclick="window.location.assign('http://www.amazon.com/Fujitsu-SCANSNAP-S1100i-600DPI-SCANNER/dp/B00Q8IN9GA')" class='buy-button'>Buy the <span class='nowrap'>Fujitsu SCANSNAP</span></button>
+                <button onclick="window.location.assign('{{buy_link}}')" class='buy-button'>Buy the <span class='nowrap'>{{manufacturer}} {{name}}</span></button>
             </div>
                 
         </div>

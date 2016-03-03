@@ -1,0 +1,50 @@
+[
+    {
+        "title_category": "A Portable & Cheap Photo Scanner",
+        "manufacturer": "Fujitsu",
+        "name": "SCANSNAP",
+        "price": 96.0,
+        "buy_link": "http://www.amazon.com/Fujitsu-SCANSNAP-S1100i-600DPI-SCANNER/dp/B00Q8IN9GA",
+        "page_url": "Portable-And-Cheap-Photo-Scanner",
+        "regular_speak": "portable & cheap scanner",
+        "features": [
+            {
+                "feature": "Scans both regular (4x6) and full-size (8½x11) photos"
+            },
+            {
+                "feature": "600 dpi (dots per inch resolution)",
+                "tooltip": {
+                    "title": "What is DPI?",
+                    "tip": "DPIs range from 300 to 4800 or higher. Despite falling at the lower range, for almost everyone, this will be enough. For comparison, 300 DPI is the resolution that most magazines are printed at. The retina display of an iPhone, designed so that you can't see individual pixels, is only around the equivalent of 320 DPI."
+                }
+            },
+            {
+                "feature": "Transfer via USB or wifi"
+            },
+            {
+                "feature": "Scans in 5 seconds"
+            },
+            {
+                "feature": "Single sided scanning"
+            }
+        ],
+        "why_best": [
+            {
+                "feature": "It gets 4.8/5 stars with 120 reviews",
+                "tooltip": {
+                    "title": "Why are you mentioning the reviews?",
+                    "tip": "We only include reviews if almost all of them appear to be real"
+                }
+            },
+            {
+                "feature": "It has 2x the DPI of the best-seller [Doxie One](http://www.amazon.com/Doxie-One-Standalone-Portable-Document/dp/B008ASBFM6) while being $30 cheaper"
+            },
+            {
+                "feature": "It was recommended by [this article](http://thewirecutter.com/reviews/best-portable-document-scanner/)"
+            }
+        ],
+        "images": [
+            "scansnap.jpg"
+        ]
+    }
+]

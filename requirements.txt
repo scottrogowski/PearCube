@@ -17,6 +17,7 @@ pexpect==4.0.1
 pickleshare==0.6
 premailer==2.9.7
 ptyprocess==0.5.1
+pymongo==3.2.1
 sendgrid==1.6.22
 simplegeneric==0.8.1
 smtpapi==0.3.1
