@@ -1,6 +1,6 @@
 import pymongo
 
-import options
+from options import options
 from secrets import MLAB_USERNAME, MLAB_PASSWORD
 
 # Connection to Mongo DB
