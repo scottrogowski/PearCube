@@ -9,7 +9,6 @@ from utils import absolute_path, force_ascii
 
 def load_flatfile():
     absolute = absolute_path('data/db.json')
-    print absolute
     with open(absolute) as flatfile:
         return json.load(flatfile)
 
@@ -26,6 +25,7 @@ def sync_mongo_with_flatfile():
                 upsert = True
                 )
         except pymongo.errors.OperationFailure, e:
+            print "mongo update failure"
             print force_ascii(e)
 
 def render_product_page(dest):
