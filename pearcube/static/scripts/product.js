@@ -3,7 +3,7 @@ $(document).ready(function() {
 });
 
 function add_tooltip_handlers() {
-    if (is_mobile()) {
+    if (is_touch_device()) {
         $('.fa').on('click', function () {
             var $el = $(this).parent()
             var question = $el.attr('data-question')
