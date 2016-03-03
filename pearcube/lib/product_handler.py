@@ -15,7 +15,8 @@ def load_flatfile():
 def sync_mongo_with_flatfile():
     # not very scalable but it will get the job done
     db = get_db()
-    # db.products.remove( {} )
+    db.products.remove( {} )
+    print "dropped %s" % db.name
     flat_json = load_flatfile()
     for product_json in flat_json:
         try:
