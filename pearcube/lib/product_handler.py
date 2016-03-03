@@ -5,7 +5,7 @@ import pymongo
 from flask import render_template, abort
 
 from orm import get_db
-from utils import absolute_path
+from utils import absolute_path, force_ascii
 
 def load_flatfile():
     absolute = absolute_path('data/db.json')
@@ -26,7 +26,7 @@ def sync_mongo_with_flatfile():
                 upsert = True
                 )
         except pymongo.errors.OperationFailure, e:
-            print unicode(e)
+            print force_ascii(e)
 
 def render_product_page(dest):
     print dest

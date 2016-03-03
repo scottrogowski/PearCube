@@ -1,4 +1,5 @@
 import sys
+import os
 
 class Options(object):
     def __init__(self):
@@ -6,6 +7,7 @@ class Options(object):
         self.PORT = 8888
         self.HOST = '127.0.0.1'
         self.LIVE_EMAILING = False
+        self.ENV = os.environ.get('PG_ENV', 'dev')
 
     def parse_command_line(self):
         # TODO this function sucks

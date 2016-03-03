@@ -12,3 +12,6 @@ def absolute_path(path_from_base):
     this_dir = os.path.dirname(__file__)
     base_dir = this_dir.rsplit('/', 1)[0]
     return base_dir + '/' + path_from_base
+
+def force_ascii(uni):
+    return uni.encode('ascii', 'ignore')
