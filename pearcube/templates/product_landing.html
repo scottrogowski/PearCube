@@ -5,7 +5,7 @@
         <li class='product_qualifier'>
             {{f.feature | linkify | safe}}
             {% if f.tooltip %}
-                <span class="tip" data-question="{{f.tooltip.title}}" data-tip="{{f.tooltip.tip}}">
+                <span class="tip" data-question="{{f.tooltip.title}}" data-tip="{{f.tooltip.tip | linkify | safe}}">
                   <i class="fa fa-question-circle"></i>
                 </span>
             {%endif%}         
@@ -14,7 +14,7 @@
 {%- endmacro %}
 
 
-{% block title %} Portable And Cheap Photo Scanner {% endblock %}
+{% block title %} {{ page_url | dashes_to_spaces }} {% endblock %}
 
 {% block head %}
   <link rel='stylesheet' href='/static/styles/css.css'>
@@ -33,7 +33,30 @@
         <div class='product' id='sha'>
             <div class='product_category'>{{title_category}}</div>
             <div class='product_image_div'>
-                <a href='{{buy_link}}'><img class='product_image' src='/static/product_imgs/{{images[0]}}'></a>
+                <div class='product_image_wrapper'>
+                    <div class='product_image_top'>
+                        {% if images|length > 1 %}
+                            <div class='product_image_bumper product_image_bumper_left' onclick='rotate_image(this, -1)'>&lt;</div>
+                        {% endif %}
+                        <a href='{{buy_link}}' class='product_image_link_wrapper'>
+                        {% for image in images %}
+                            <img class='product_image {{ "visible_image" if loop.first }}' src='/static/product_imgs/{{image}}'>
+                        {% endfor %}
+                        </a>
+                        {% if images|length > 1 %}
+                            <div class='product_image_bumper product_image_bumper_right' onclick="rotate_image(this, 1)">&gt;</div>
+                        {% endif %}
+                    </div>
+                    {% if images|length > 1 %}
+                        <div class='product_image_buttons_wrapper'>
+                            <div class='product_image_buttons'>
+                                {% for image in images %}
+                                    <span class='product_image_button {{ "selected_button" if loop.first }}' onclick='rotate_image_to(this, {{loop.index0}})'>•</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
             </div>
             <div class='product_header_text'><a href='{{buy_link}}'>{{manufacturer}} {{name}} - <span class='product_price'>{{price | format_price}} from amazon</span></a></div>
             <div>Features</div>

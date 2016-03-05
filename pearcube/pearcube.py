@@ -6,6 +6,7 @@ from flask import Flask, request, render_template
 from werkzeug.routing import BaseConverter
 import premailer
 
+from lib.utils import absolute_path
 from lib.options import options
 from lib.cs_emailer import send_request_email, send_results_email
 from lib.product_handler import render_product_page, sync_mongo_with_flatfile
@@ -44,6 +45,10 @@ def linkify_filter(string):
 def format_price_filter(price_float):
     return "$%.2f" % price_float
 
+@app.template_filter('dashes_to_spaces')
+def remove_dash_filter(url):
+    return url.replace('-', ' ')
+
 @app.route('/')
 def index_page():
     return render_template('index.html')
@@ -74,4 +79,5 @@ if __name__ == '__main__':
     sync_mongo_with_flatfile()
     app.run(debug = options.DEBUG,
             host = options.HOST,
-            port = options.PORT)
+            port = options.PORT,
+            extra_files = [absolute_path('data/db.json')])

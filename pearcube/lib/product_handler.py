@@ -14,8 +14,10 @@ def load_flatfile():
 
 def sync_mongo_with_flatfile():
     # not very scalable but it will get the job done
+    # TODO. Let's not introduce mongo until we need it.
+    # Let's get rid of this.
     db = get_db()
-    db.products.remove( {} )
+    db.products.drop()
     print "dropped %s" % db.name
     flat_json = load_flatfile()
     for product_json in flat_json:

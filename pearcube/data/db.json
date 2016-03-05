@@ -1,5 +1,6 @@
 [
     {
+        "int_id": 1,
         "title_category": "A Portable & Cheap Photo Scanner",
         "manufacturer": "Fujitsu",
         "name": "SCANSNAP",
@@ -46,5 +47,58 @@
         "images": [
             "scansnap.jpg"
         ]
+    },
+    {
+        "int_id": 2,
+        "title_category": "Best Flat Screen Television",
+        "manufacturer": "LG",
+        "name": "4K HD OLED TV",
+        "price": 2997.00,
+        "buy_link": "http://www.amazon.com/LG-Electronics-65EF9500-65-Inch-Ultra/dp/B010RX0UKY",
+        "page_url": "Best-Flat-Screen-Television",
+        "regular_speak": "tv",
+        "features": [
+            {
+                "feature": "State-of-the-art OLED technology provides an <b>infinite contrast ratio</b>",
+                "tooltip": {
+                    "title": "What is OLED?",
+                    "tip": "OLED is the next step above LED technology. Infinite contrast is possible because individual pixels can be dimmed or turned off completely. Colors are noticibly better than any other television you've seen before. Turning off individual pixels also allows the television to be thinner and consume less power"
+                }
+            },
+            {
+                "feature": "Netflix, YouTube, and Spotify available on [WebOS](http://www.lg.com/uk/smarttv/webos) - included"
+            },
+            {
+                "feature": "Built in DVR"
+            },
+            {
+                "feature": "4 HMDI inputs. Ethernet and Wifi connectivity"
+            },
+            {
+                "feature": "Available in 55 and 65 inch models",
+                "tooltip": {
+                    "title": "How big of a television is the right size",
+                    "tip": "Bigger is better up to a point. Too big though, and not only do you start to see individual pixels, you also run up against the limits of the human range of vision! For a 55 inch TV, you want to be about 8 feet away. For a 65 inch, you want to be 9 feet away. Check out [a scientific explanation](http://www.rtings.com/tv/learn/size-to-distance-relationship)"
+                }
+            }
+        ],
+        "why_best": [
+            {
+                "feature": "LG is the only company currently making OLED televisions"
+            },
+            {
+                "feature": "As a television manufacturer, LG consistently comes in at-or-near the top [on](http://www.cnet.com/topics/tvs/best-tvs/) [comparison](http://www.pcmag.com/article2/0,2817,2372085,00.asp) [sites](http://www.tomsguide.com/us/best-tvs,review-2224.html)."
+            }
+        ],
+        "see_also": {
+            "Budget flat screen tv": 3
+        },
+        "images": [
+            "lg1.jpg", 
+            "lg2.jpg", 
+            "lg3.jpg",
+            "lg4.jpg"
+        ]
     }
+
 ]
