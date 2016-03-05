@@ -11,6 +11,7 @@ from lib.secrets import SENDGRID_USERNAME, SENDGRID_PASSWORD
 sg_singleton = sendgrid.SendGridClient(SENDGRID_USERNAME, SENDGRID_PASSWORD)
 
 def send_request_email(form):
+    #TODO also send to them
     email = form.get('email_address','')
     body = form.get('body', '')
     if not validate_email(email):
@@ -34,15 +35,18 @@ def send_request_email(form):
 def send_results_email():
     html = render_template("email.html")
     html = premailer.transform(html)
+    title = "Best Flat Screen Television"
+    to_email = 'irisha.malkova@gmail.com' #'scottmrogowski@gmail.com' #irisha.malkova@gmail.com
 
     msg = sendgrid.Mail(
         from_email = "scottmrogowski@gmail.com",
-        to = 'michaelagcordes@yahoo.com',
-        subject = 'PearCube - Small & Portable Photo Scanner',
+        to = to_email,
+        subject = 'PearCube - %s' % title,
         html = html)
 
     if options.LIVE_EMAILING:
         status, msg = sg_singleton.send(msg)
+        msg += to_email
         return msg, status
-
-    return html, 200
+    else:
+        return "Live emailing is off"

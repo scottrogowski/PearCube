@@ -69,7 +69,7 @@ def debug_email():
 		# html = premailer.transform(html)
 		return html
 
-@app.route('/send_debug_email', methods=['GET'])
+@app.route('/send_email', methods=['GET'])
 def send_debug_email():
 	if options.DEBUG:
 		return send_results_email()
