@@ -53,6 +53,9 @@ def remove_dash_filter(url):
 def index_page():
     return render_template('index.html')
 
+@app.route('/about')
+def about_page():
+    return render_template('about.html')
 
 @app.route('/<regex(A-Z"[A-Za-z0-9\-]+"):dest>')
 def product_page(dest):

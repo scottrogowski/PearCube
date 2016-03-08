@@ -1,0 +1,30 @@
+{% extends "_base.html" %}
+
+{% block head %}
+   <link rel='stylesheet' href='/static/styles/css.css'>
+   <link rel='stylesheet' href='/static/styles/product.css'>
+{% endblock %}
+
+{% block body %}
+<div class='page-wrapper'>
+    <div class='content-div-wrapper'>
+
+    <div class='title-box-2-wrapper hr'><div class='title-box-2'><a href='{{ "/" | absolutify }}'><img class='logo-2' src='{{ "/static/images/whitelogo.png" | absolutify }}'></a></div></div>      <div class='content-div'>
+
+        <p>
+            Online shopping is overwhelming. For any one thing you want to buy, there are often hundreds of options. Trying to compare these options to make a good choice is stressful and time consuming. Worse, you can no longer trust reviews because <a class='link' href='http://www.economist.com/news/business/21676835-evolving-fight-against-sham-reviews-five-star-fakes'>many of them are fake</a>.
+        </p>
+        <p>
+            Pearcube sells only the best of everything. We spend a lot of time doing the research for you. Want a toaster? <a class='link' href='/Best-Toaster'>We found you the best one</a>. Want an electric toothbrush? <a class='link' href='/Best-Electric-Toothbrush'>We found that too</a>. Looking for a television? We have <a class='link' href='/Best-Flatscreen-Television'>the best of the best</a> and <a class='link' href='Best-Affordable-Flatscreen-Television'>the best affordable model</a>.
+        </p>
+        <p>
+            We recognize that we sometimes make mistakes which is why we offer free return shipping up to $50. If it appears that a product we are recommending is not the best, we will stop selling it and work harder to find you the best.
+        </p>
+        <p>
+            Pearcube is still very young and very small. If you can't find what you are looking for, or you are stressed about buying something online, <a class='link' href='/'>let us know</a>. We would love to find it for you.
+        </p>
+    </div>
+</div>
+
+</div>
+{% endblock %}

@@ -9,11 +9,6 @@
     margin: 25px auto;
 }
 
-.product > div {
-    margin: 5px 0;
-    /*font-size: 18px;*/
-    font-weight: bold;
-}
 
 .product_image_div {
     text-align: center;
@@ -104,6 +99,19 @@
     font-weight: bold;
 }
 
+.product_header_text {
+    font-weight: bold;
+}
+
+.product_sub_header {
+    font-weight: bold;    
+    margin: 5px 0;
+}
+
+.our_guarantee {
+    list-style-type: none;
+}
+
 .product_qualifiers {
     list-style: disc;
     color: #888;
@@ -127,6 +135,7 @@
     cursor: pointer;
     color: #333;
     padding: 10px;
+    width: 100%;
 }
 
 #info-popup {
@@ -139,6 +148,18 @@
     font-weight: bold;
 }
 
+.footer {
+    text-align: center;
+    margin: 50px 0 20px;
+    font-size: larger;
+}
+
+.footer a {
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: smaller;
+    font-weight: lighter;
+}
 
 
 @media only screen and (min-width: 500px) {
