@@ -34,7 +34,7 @@
             <div class='product_category'>{{title_category}}</div>
             <div class='product_image_div'>
                 <div class='product_image_wrapper'>
-                        <div class='product_header_text'><a href='{{buy_link}}'>{{manufacturer}} {{name}} - <span class='product_price'>{{price | format_price}} from amazon</span></a></div>
+                        <div class='product_header_text'><a href='{{buy_link}}'>{{manufacturer}} {{name}} - <span class='product_price nowrap'>{{price | format_price}} from amazon</span></a></div>
                                 <div class='product_image_top'>
                         {% if images|length > 1 %}
                             <div class='product_image_bumper product_image_bumper_left' onclick='rotate_image(this, -1)'>&lt;</div>

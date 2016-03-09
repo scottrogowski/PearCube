@@ -167,13 +167,16 @@
     }
     .product_image {
         max-width: 90%;
-        max-height: 37vh;
+        max-height: 30vh;
     }
     .product_image_wrapper {
-        height: 46vh;
+        height: 48vh;
         padding: 15px;
     }
     body {
         font-size: 16px;
+    }
+    .buy-button {
+        font-size: 5vw;
     }
 }
