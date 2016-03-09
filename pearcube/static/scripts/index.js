@@ -21,7 +21,7 @@ function post(url, data, cb) {
     }
 }
 
-var EMAIL_REGEX = new RegExp('\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b');
+// var EMAIL_REGEX = new RegExp('/\S+@\S+\.\S+/');
 
 function send_cs_email() {
     var $cs_form_ta = $('#cs-form-ta')
@@ -34,7 +34,8 @@ function send_cs_email() {
         problems_exist = true;
     }
 
-    if ($cs_form_in.val().length < 3 || !(EMAIL_REGEX.test($cs_form_in.val()))) {
+    if ($cs_form_in.val().length < 3 || !(/\S+@\S+\.\S+/.test($cs_form_in.val()))) {
+        alert($cs_form_in.val())
         $cs_form_in.addClass('form-problems')
         $cs_form_in.focus(function () {$cs_form_in.removeClass('form-problems')})
         problems_exist = true;

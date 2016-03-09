@@ -152,9 +152,6 @@
     font-weight: bold;
 }
 
-
-
-
 @media only screen and (min-width: 500px) {
     .content-div-wrapper {
         max-width:500px;

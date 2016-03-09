@@ -279,7 +279,8 @@ h1,h2,h3{
     }
 
     #clock-popup__message {
-        font-size: 7vw;
+        font-size: 5vw;
+        line-height: 1em;
     }
 
 }
