@@ -2,16 +2,17 @@
 
 import re
 
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect
 from werkzeug.routing import BaseConverter
 import premailer
 
-from lib.utils import absolute_path
+from lib.utils import absolute_path, unique_id
 from lib.options import options
 from lib.cs_emailer import send_request_email, send_results_email
 from lib.product_handler import render_product_page, sync_mongo_with_flatfile
 
 app = Flask(__name__)
+hash_version = unique_id()[:5]
 
 class RegexConverter(BaseConverter):
     def __init__(self, url_map, *items):
@@ -49,6 +50,15 @@ def format_price_filter(price_float):
 @app.template_filter('dashes_to_spaces')
 def remove_dash_filter(url):
     return url.replace('-', ' ')
+
+@app.template_filter('versioned')
+def versioned_static(url):
+    return "/static/" + url + "?v=" + hash_version
+
+# @app.route('/static/<regex("[a-f0-9]{5}"):hash_version>/<path:static_path>')
+# def debug_redirect_static(hash_version, static_path):
+#     print 'here'
+#     return redirect('/static/' + static_path)
 
 @app.route('/')
 def index_page():

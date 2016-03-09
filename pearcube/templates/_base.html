@@ -16,7 +16,7 @@
 
 {% block jquery %}
     {% if debug %}
-        <script src="/static/scripts/jquery-2.2.0.min.js"></script>
+        <script src="{{'scripts/jquery-2.2.0.min.js' | versioned}}"></script>
     {% else %}
     	<script src='https://code.jquery.com/jquery-2.2.0.min.js'></script>
     {% endif %}

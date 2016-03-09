@@ -17,17 +17,17 @@
 {% block title %} {{ page_url | dashes_to_spaces }} {% endblock %}
 
 {% block head %}
-  <link rel='stylesheet' href='/static/styles/css.css'>
-  <link rel='stylesheet' href='/static/styles/product.css'>
-  <link rel="stylesheet" href="/static/styles/font-awesome.css">
-  <link rel="stylesheet" href="/static/styles/tipr.css">
+  <link rel='stylesheet' href='{{"styles/css.css" | versioned}}'>
+  <link rel='stylesheet' href='{{"styles/product.css" | versioned}}'>
+  <link rel="stylesheet" href='{{"styles/font-awesome.css" | versioned}}'>
+  <link rel="stylesheet" href='{{"styles/tipr.css" | versioned}}'>
 {% endblock %}
 
 
 {% block body %}
     <div class='content-div-wrapper'>
 
-    <div class='title-box-2-wrapper hr'><div class='title-box-2'><a href='{{ "/" | absolutify }}'><img class='logo-2' src='{{ "/static/images/whitelogo.png" | absolutify }}'> <span style='font-size: 13px'>Only the best of everything</span></a></div></div>
+    <div class='title-box-2-wrapper hr'><div class='title-box-2'><a href='{{ "/" | absolutify }}'><img class='logo-2' src='{{ "images/whitelogo.png" | versioned | absolutify }}'> <span style='font-size: 13px'>Only the best of everything</span></a></div></div>
 
     <div class='product-wrapper'>
         <div class='product' id='sha'>
@@ -103,7 +103,7 @@
 {% endblock %}
 
 {% block scripts %}
-    <script src='/static/scripts/js.js'></script>
-    <script src='/static/scripts/product.js'></script>
-    <script src="/static/scripts/tipr.js"></script>
+    <script src='{{"scripts/js.js" | versioned}}'></script>
+    <script src='{{"scripts/product.js" | versioned}}'></script>
+    <script src='{{"scripts/tipr.js" | versioned}}'></script>
 {% endblock %}
