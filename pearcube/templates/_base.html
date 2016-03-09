@@ -15,7 +15,11 @@
 {% endblock %}
 
 {% block jquery %}
-	<script src='https://code.jquery.com/jquery-2.2.0.min.js'></script>
+    {% if debug %}
+        <script src="/static/scripts/jquery-2.2.0.min.js"></script>
+    {% else %}
+    	<script src='https://code.jquery.com/jquery-2.2.0.min.js'></script>
+    {% endif %}
 {% endblock %}
 {% block scripts %}
 {% endblock %}

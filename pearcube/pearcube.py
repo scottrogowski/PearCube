@@ -23,8 +23,9 @@ class RegexConverter(BaseConverter):
 app.url_map.converters['regex'] = RegexConverter
 
 @app.context_processor
-def inject_port():
-    return dict(port=options.PORT)
+def inject_globals():
+    return {'debug': options.DEBUG,
+            'port': options.PORT}
 
 @app.template_filter('absolutify')
 def absolutify_filter(path):

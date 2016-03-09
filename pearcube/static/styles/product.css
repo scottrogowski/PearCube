@@ -52,8 +52,8 @@
 }
 
 .product_image {
-    max-height: 400px;
-    max-width: 400px;   
+    max-height: 370px;
+    max-width: 370px;   
     display: none;
     /*visibility: hidden;*/
     margin: 0 auto;
@@ -91,6 +91,7 @@
     font-size: 20px; /*Allows "A Portable & Cheap Photoscanner" to fit in gmail iphone 6*/
     font-weight: bold;
     /*text-align: center;*/
+    font-family: "Raleway"
 }
 
 .product_price {
@@ -106,6 +107,7 @@
 .product_sub_header {
     font-weight: bold;    
     margin: 5px 0;
+    font-family: "Raleway"
 }
 
 .our_guarantee {
@@ -136,6 +138,7 @@
     color: #333;
     padding: 10px;
     width: 100%;
+    line-height: 1.4em;
 }
 
 #info-popup {
@@ -148,18 +151,7 @@
     font-weight: bold;
 }
 
-.footer {
-    text-align: center;
-    margin: 50px 0 20px;
-    font-size: larger;
-}
 
-.footer a {
-    margin: 0 10px;
-    font-weight: bold;
-    font-size: smaller;
-    font-weight: lighter;
-}
 
 
 @media only screen and (min-width: 500px) {
@@ -174,12 +166,13 @@
     }
     .product_image {
         max-width: 90%;
-        max-height: 40vh;
+        max-height: 37vh;
     }
     .product_image_wrapper {
         height: 45vh;
+        padding: 15px;
     }
     body {
-        font-size: 15px;
+        font-size: 16px;
     }
 }

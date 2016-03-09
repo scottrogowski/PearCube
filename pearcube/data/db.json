@@ -99,6 +99,133 @@
             "lg3.jpg",
             "lg4.jpg"
         ]
-    }
+    },
+    {
+        "int_id": 3,
+        "title_category": "Best Cheap Flat Screen TV",
+        "manufacturer": "Vizio",
+        "name": "E-series",
+        "price": 159.99,
+        "price_qualifier": "24 inch model",
+        "buy_link": "http://www.amazon.com/VIZIO-E50-C1-50-Inch-1080p-Smart/dp/B00SMBFP4U",
+        "page_url": "Best-Cheap-Flat-Screen-Television",
+        "regular_speak": "tv",
+        "features": [
+            {
+                "feature": "4404 static contrast ratio in [tests](http://www.rtings.com/tv/reviews/vizio/e-series-2015)",
+                "tooltip": {
+                    "title": "What is contrast ratio?",
+                    "tip": "Contrast ratio is the most important factor in TV picture quality. In simple terms, it is the difference between the blackest blacks and the whitest whites. The higher the ratio, the better the colors. Modern LCD televisions range from a low of. See a more in-depth explanation [here](http://www.cnet.com/news/contrast-ratio-or-how-every-tv-manufacturer-lies-to-you/)"
+                }
+            },
+            {
+                "feature": "1080 resolution",
+                "tooltip": {
+                    "title": "What is resolution?",
+                    "tip": "Resolution is the number of pixels (individual dots of light) on a television. The numbers quoted (e.g. 1080) are usually the number of vertical pixels. The higher your resolution, the more detail you see, up to a point. The content you are watching was also recorded in a certain resolution. If your tv has a higher resolution that what you are watching, the tv will just blend the pixels together and you will get no benefit. Almost everything from BlueRay to HDTV to Netflix is currently recorded in 1080 resolution. However, the next step is to double that resolution to 2160. This is called 4k or Ultra-HD. [More about 4k](http://www.techradar.com/us/news/television/ultra-hd-everything-you-need-to-know-about-4k-tv-1048954)"
+                }
+            },
+            {
+                "feature": "Wifi connectivity"
+            },
+            {
+                "feature": "Netflix, Hulu, YouTube and more available on [VIZIO Internet Apps Plus](http://www.vizio.com/via-apps) - included"
+            },
+            {
+                "feature": "Energy star certified"
+            },
+            {
+                "feature": "Available in 24-70 inch models",
+                "tooltip": {
+                    "title": "How big of a television is the right size",
+                    "tip": "Bigger is better up to a point. Too big though, and not only do you start to see individual pixels, you also run up against the limits of the human range of vision! For a 55 inch TV, you want to be about 8 feet away. For a 65 inch, you want to be 9 feet away. Check out [a scientific explanation](http://www.rtings.com/tv/learn/size-to-distance-relationship)"
+                }
+            }
+        ],
+        "why_best": [
+            {
+                "feature": "Vizio makes good proletarian televisions that last a long time. If you are not overly obsessed with picture quality, you will not regret buying this television"
+            },
+            {
+                "feature": "The E-series is Vizio's entry-level models. With the E-series, you get everything you need with a minimum of bells-and-wistles."
+            }
+        ],
+        "see_also": {
+            "Absolute best flat screen tv": 2
+        },
+        "images": [
+            "vizio1.jpg", 
+            "vizio2.jpg", 
+            "vizio3.jpg",
+            "vizio4.jpg"
+        ]
+    },
+    {
+        "int_id": 4,
+        "title_category": "Best Toaster",
+        "manufacturer": "Black & Decker",
+        "name": "TR1278B",
+        "price": 18.48,
+        "buy_link": "http://www.amazon.com/dp/B008YS1ZAO",
+        "page_url": "Best-Toaster",
+        "regular_speak": "toaster",
+        "features": [
+            {
+                "feature": "Adjustable 1-10 dial"
+            },            
+            {
+                "feature": "Frozen & Bagel switches"
+            },            
+            {
+                "feature": "Simple & intuitive controls"
+            },
+            {
+                "feature": "Black or red"
+            }
 
+        ],
+        "why_best": [
+            {
+                "feature": "It's inexpensive, reliable, and won't burn your toast"
+            }
+        ],
+        "images": [
+            "toaster1.jpg", 
+            "toaster2.jpg", 
+            "toaster3.jpg"
+        ]
+    },
+    {
+        "int_id": 5,
+        "title_category": "Best Electric Toothbrush",
+        "manufacturer": "Oral-B",
+        "name": "Pro 3000",
+        "price": 88.95,
+        "buy_link": "http://www.amazon.com/gp/product/B003UKKHB4",
+        "page_url": "Best-Electric-Toothbrush",
+        "regular_speak": "electric toothbrush",
+        "features": [
+            {
+                "feature": "5 settings"
+            },            
+            {
+                "feature": "Replacement heads are only about $4 each"
+            },            
+            {
+                "feature": "Simple, beautiful design (the side holder detaches)"
+            }
+        ],
+        "why_best": [
+            {
+                "feature": "Oral-B is [more recommended]() than primary competitor Phillips"
+            },
+            {
+                "feature": "Everything you need in an electric toothbrush. Nothing you don't"
+            }
+        ],
+        "images": [
+            "toothbrush1.jpg", 
+            "toothbrush2.jpg"
+        ]
+    }
 ]

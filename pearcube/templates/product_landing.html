@@ -27,14 +27,15 @@
 {% block body %}
     <div class='content-div-wrapper'>
 
-    <div class='title-box-2-wrapper hr'><div class='title-box-2'><a href='{{ "/" | absolutify }}'><img class='logo-2' src='{{ "/static/images/whitelogo.png" | absolutify }}'></a></div></div>
+    <div class='title-box-2-wrapper hr'><div class='title-box-2'><a href='{{ "/" | absolutify }}'><img class='logo-2' src='{{ "/static/images/whitelogo.png" | absolutify }}'> <span style='font-size: 13px'>Only the best of everything</span></a></div></div>
 
     <div class='product-wrapper'>
         <div class='product' id='sha'>
             <div class='product_category'>{{title_category}}</div>
             <div class='product_image_div'>
                 <div class='product_image_wrapper'>
-                    <div class='product_image_top'>
+                        <div class='product_header_text'><a href='{{buy_link}}'>{{manufacturer}} {{name}} - <span class='product_price'>{{price | format_price}} from amazon</span></a></div>
+                                <div class='product_image_top'>
                         {% if images|length > 1 %}
                             <div class='product_image_bumper product_image_bumper_left' onclick='rotate_image(this, -1)'>&lt;</div>
                         {% endif %}
@@ -58,15 +59,25 @@
                     {% endif %}
                 </div>
             </div>
-            <div class='product_header_text'><a href='{{buy_link}}'>{{manufacturer}} {{name}} - <span class='product_price'>{{price | format_price}} from amazon</span></a></div>
+
             <div class='product_sub_header'>Features</div>
             <ul class='product_qualifiers'>
                 {{feature_list(features)}}
             </ul>
-            <div class='product_sub_header'>Why is this the best {{regular_speak}}?</div>
-            <ul class='product_qualifiers'>
-                {{feature_list(why_best)}}
-            </ul>
+            {% if why_best %}
+                <div class='product_sub_header'>Why is this the best {{regular_speak}}?</div>
+                <ul class='product_qualifiers'>
+                    {{feature_list(why_best)}}
+                </ul>
+            {% endif %}
+            {% if see_also %}
+                <div class="product_sub_header">See also</div>
+                <ul class='product_qualifiers'>
+                    {% for see, link in see_also.items() %}
+                        <li class='product_qualifier'><a class='link' href="{{link}}">{{see}}</a></li>
+                    {% endfor %}
+                </ul>                    
+            {% endif %}
             <div class='product_sub_header'>Our guarantee</div>
             <ul class='our_guarantee'>
                 <li>Pearcube sells <a href='/about' class='link'>only the best of everything</a>. We do extensive research before making a recommendation. If you buy this, and it doesn't work out, we want to know. While Amazon will refund your purchase, we will refund your return shipping to Amazon up to $50. We will probably also stop selling it.</li>
@@ -78,7 +89,7 @@
         </div>
     </div>
     <div class='footer'>
-        <a href='/'>Home</a> | <a href='/about'>About Pearcube</a> | <a href='/'>Find me something</a>
+        <a href='/'>Home</a> | <a href='/about'>About</a> | <a href='/'>Finder</a>
     </div>
 </div>
 
