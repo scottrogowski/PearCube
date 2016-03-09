@@ -8,7 +8,7 @@ import premailer
 
 from lib.utils import absolute_path, unique_id
 from lib.options import options
-from lib.cs_emailer import send_request_email, send_results_email
+from lib.email_handler import send_request_email, send_results_email
 from lib.product_handler import render_product_page, sync_mongo_with_flatfile
 
 app = Flask(__name__)

@@ -69,14 +69,14 @@ function send_cs_email() {
         dataType: 'json',
         success: function(resp) {
             show_lightbox($clock_popup);
+            $cs_form_button.text("Send");
+            $cs_form_in.val('');
+            $cs_form_ta.val('');
             if ('confirmation_body' in resp) {
                 // For debugging
                 $clock_popup.append('<iframe style="width:90%; height:400px;"></iframe>');
                 $clock_popup.find('iframe')[0].contentDocument.write(resp['confirmation_body']);
             }
-            $cs_form_button.text("Send");
-            $cs_form_in.val('');
-            $cs_form_ta.val('');
         },
         error: function(xhr, status, error) {
             console.log(xhr, status, error);

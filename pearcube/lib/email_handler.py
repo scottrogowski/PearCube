@@ -38,10 +38,11 @@ def send_request_email(form):
 
     if options.LIVE_EMAILING:
         status, res = sg_singleton.send(msg_for_me)
-
+        res = json.loads(res)
         # successful sendgrid responses look like
         # {"message": "success"}
         # they don't validate emails before returning
+        # also, they return res as a string... which is weird
         return json.dumps(res), status
     else:
         return json.dumps({'confirmation_body': confirmation_body}), 200
