@@ -117,11 +117,9 @@
 
 .product_qualifiers {
     list-style: disc;
-    color: #888;
 }
 
 .product_qualifier {
-    color: #444;
 }
 
 .product .buy-button-wrapper {
@@ -136,7 +134,7 @@
     margin: 0 auto;
     appearance: button;
     cursor: pointer;
-    color: #333;
+    /*color: #333;*/
     padding: 10px;
     width: 100%;
     line-height: 1.4em;
