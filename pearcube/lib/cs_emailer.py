@@ -8,45 +8,55 @@ import premailer
 from lib.options import options
 from lib.secrets import SENDGRID_USERNAME, SENDGRID_PASSWORD
 
+PRODUCT_FINDER_EMAIL = 'finder@pearcube.com'
+MY_EMAIL = 'scott@pearcube.com'
+
 sg_singleton = sendgrid.SendGridClient(SENDGRID_USERNAME, SENDGRID_PASSWORD)
 
 def send_request_email(form):
-    #TODO also send to them
-    email = form.get('email_address','')
-    body = form.get('body', '')
+    their_email = form.get('email_address','')
+    what_they_wrote = form.get('body', '')
 
-    if not validate_email(email):
+    if not validate_email(their_email):
         return "INVALID_EMAIL", 400
 
-    if not body:
+    if not what_they_wrote:
         return "INVALID_BODY", 400
 
-    confirmation_body = render_template("confirmation_email.html", body=body)
-    confirmation_body = premailer.transform(confirmation_body)
+    confirmation_body = render_template("confirmation_email_plain.html", 
+                                        their_email=their_email,
+                                        what_they_wrote=what_they_wrote)
+    confirmation_body = premailer.transform(confirmation_body) # makes styles inline
 
-    msg = sendgrid.Mail(
-        from_email = 'product_finder@pearcube.com',
-        to = 'scott@pearcube.com',
-        reply_to = email,
-        subject = 'PearCube product finder',
-        html = confirmation_body)
-
-    # reply to a sent email???
+    kargs = {'from_email': PRODUCT_FINDER_EMAIL,
+             'subject': 'PearCube product finder',
+             'html': confirmation_body}
+    msg_for_me = sendgrid.Mail(
+        to = MY_EMAIL,
+        reply_to = their_email,
+        **kargs)
 
     if options.LIVE_EMAILING:
-        status, msg = sg_singleton.send(msg)
-        return json.dumps(msg), status
+        status, res = sg_singleton.send(msg_for_me)
 
-    return confirmation_body, 200
+        # successful sendgrid responses look like
+        # {"message": "success"}
+        # they don't validate emails before returning
+        return json.dumps(res), status
+    else:
+        return json.dumps({'confirmation_body': confirmation_body}), 200
 
 def send_results_email():
     html = render_template("email.html")
     html = premailer.transform(html)
-    title = "Best Flat Screen Television"
-    to_email = 'irisha.malkova@gmail.com' #'scottmrogowski@gmail.com' #irisha.malkova@gmail.com
+    title = "Best Cheap Flat Screen Television"
+    # to_email = 'irisha.malkova@gmail.com' 
+    to_email = 'scottmrogowski@gmail.com'
+
 
     msg = sendgrid.Mail(
-        from_email = "scottmrogowski@gmail.com",
+        from_email = PRODUCT_FINDER_EMAIL,
+        reply_to = "scottmrogowski@gmail.com",
         to = to_email,
         subject = 'PearCube - %s' % title,
         html = html)

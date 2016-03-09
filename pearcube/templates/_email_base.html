@@ -1,0 +1,16 @@
+<style>
+    {% include "static/styles/css.css" %}
+    .content-div-wrapper {
+        max-width:500px;
+    }
+    body {
+        background-color: white;
+    }
+</style>
+{% block email_style %}{% endblock %}
+<div class='content-div-wrapper'>
+
+    <div class='title-box-2-wrapper hr'><div class='title-box-2'><a href='{{ "/" | absolutify }}'><img class='logo-2' src='{{ "images/whitelogo.png" | versioned | absolutify }}'></a></div></div>
+
+    {% block email_body %}{%endblock%}
+</div>

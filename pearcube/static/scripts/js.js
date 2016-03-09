@@ -8,8 +8,6 @@ function is_touch_device() {
 }
 
 function show_lightbox(lightbox_id) {
-    console.log(lightbox_id)
-    console.log($(lightbox_id))
     $('.lightbox-overlay').css('display','flex');
     $(lightbox_id).css('display','block');
 }
