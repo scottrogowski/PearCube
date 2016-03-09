@@ -102,6 +102,7 @@
 
 .product_header_text {
     font-weight: bold;
+    display: inline-flex;
 }
 
 .product_sub_header {
@@ -169,7 +170,7 @@
         max-height: 37vh;
     }
     .product_image_wrapper {
-        height: 45vh;
+        height: 46vh;
         padding: 15px;
     }
     body {

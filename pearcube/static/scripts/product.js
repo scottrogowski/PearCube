@@ -11,7 +11,9 @@ function add_tooltip_handlers() {
         $('#info-popup').find('.info-content').html(content);
         show_lightbox('#info-popup');
     });
-   $('.tip').tipr();
+    if (!is_touch_device()) {
+       $('.tip').tipr();
+    }
 }
 
 function rotate_image(el, direction) {
