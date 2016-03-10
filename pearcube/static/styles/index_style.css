@@ -201,7 +201,7 @@ h1,h2,h3{
     white-space: nowrap;
     margin: auto;
     text-align: center;
-    /*text-align: left;*/
+    display: block;
 }
 
 .frontpage_carousel_bumper {
