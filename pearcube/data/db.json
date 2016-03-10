@@ -95,8 +95,8 @@
             "Budget flat screen tv": 3
         },
         "images": [
-            "lg1.jpg", 
-            "lg2.jpg", 
+            "lg1.jpg",
+            "lg2.jpg",
             "lg3.jpg",
             "lg4.jpg"
         ]
@@ -156,8 +156,8 @@
             "Absolute best flat screen tv": 2
         },
         "images": [
-            "vizio1.jpg", 
-            "vizio2.jpg", 
+            "vizio1.jpg",
+            "vizio2.jpg",
             "vizio3.jpg"
         ]
     },
@@ -173,10 +173,10 @@
         "features": [
             {
                 "feature": "Adjustable 1-10 dial"
-            },            
+            },
             {
                 "feature": "Frozen & Bagel switches"
-            },            
+            },
             {
                 "feature": "Simple & intuitive controls"
             },
@@ -191,8 +191,8 @@
             }
         ],
         "images": [
-            "toaster1.jpg", 
-            "toaster2.jpg", 
+            "toaster1.jpg",
+            "toaster2.jpg",
             "toaster3.jpg"
         ]
     },
@@ -208,10 +208,10 @@
         "features": [
             {
                 "feature": "5 settings"
-            },            
+            },
             {
                 "feature": "Replacement heads are only about $4 each"
-            },            
+            },
             {
                 "feature": "Simple, beautiful design (the side holder detaches)"
             }
@@ -225,8 +225,46 @@
             }
         ],
         "images": [
-            "toothbrush1.jpg", 
+            "toothbrush1.jpg",
             "toothbrush2.jpg"
         ]
+    },
+    {
+        "int_id": 6,
+        "title_category": "Best Small Drip Coffeemaker",
+        "manufacturer": "Mr. Coffee",
+        "name": "DRX5",
+        "price": 19.99,
+        "buy_link": "http://www.amazon.com/gp/product/B0008JIW8U",
+        "page_url": "Best-Small-Drip-Coffeemaker",
+        "regular_speak": "coffeemaker",
+        "features": [
+            {
+                "feature": "Up to 4 cups of coffee"
+            },
+            {
+                "feature": "Simple on/off functionality"
+            },
+            {
+                "feature": "Additional easy-to-use delay feature",
+                "tooltip": {
+                    "title": "What does \"delay\" do on a coffee machine",
+                    "tip": "This allows you to set a time for your coffee to start brewing. So if, for example, you want coffee ready when you wake up at 7:00, just set the delay to 7 and the coffeemaker will turn on automatically"
+                }
+            }
+        ],
+        "why_best": [
+            {
+                "feature": "$20 for a coffeemaker (or any appliance) is hard to beat"
+            },
+            {
+                "feature": "Mr. Coffee is a reputable brand with over [40 years on experience](https://en.wikipedia.org/wiki/Mr._Coffee)"
+            }
+        ],
+        "images": [
+            "mrcoffee1.jpg",
+            "mrcoffee2.jpg"
+        ]
+
     }
 ]

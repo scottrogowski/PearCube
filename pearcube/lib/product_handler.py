@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import json
 
-import pymongo 
+import pymongo
 from flask import render_template, abort
 
 from orm import get_db

@@ -23,7 +23,7 @@ def send_request_email(form):
     if not what_they_wrote:
         return "INVALID_BODY", 400
 
-    confirmation_body = render_template("confirmation_email_plain.html", 
+    confirmation_body = render_template("confirmation_email_plain.html",
                                         their_email=their_email,
                                         what_they_wrote=what_they_wrote)
     confirmation_body = premailer.transform(confirmation_body) # makes styles inline
@@ -51,7 +51,7 @@ def send_results_email():
     html = render_template("email.html")
     html = premailer.transform(html)
     title = "Best Cheap Flat Screen Television"
-    # to_email = 'irisha.malkova@gmail.com' 
+    # to_email = 'irisha.malkova@gmail.com'
     to_email = 'scottmrogowski@gmail.com'
 
 

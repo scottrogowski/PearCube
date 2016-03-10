@@ -8,8 +8,8 @@
                 <span class="tip" data-question="{{f.tooltip.title}}" data-tip="{{f.tooltip.tip | linkify | safe}}">
                   <i class="fa fa-question-circle"></i>
                 </span>
-            {%endif%}         
-        </li>           
+            {%endif%}
+        </li>
     {% endfor %}
 {%- endmacro %}
 
@@ -76,7 +76,7 @@
                     {% for see, link in see_also.items() %}
                         <li class='product_qualifier'><a class='link' href="{{link}}">{{see}}</a></li>
                     {% endfor %}
-                </ul>                    
+                </ul>
             {% endif %}
             <div class='product_sub_header'>Our guarantee</div>
             <ul class='our_guarantee'>
@@ -85,7 +85,7 @@
             <div class='buy-button-wrapper'>
                 <button onclick="window.location.assign('{{buy_link}}')" class='buy-button'>Buy the <span class='nowrap'>{{manufacturer}} {{name}}</span></button>
             </div>
-                
+
         </div>
     </div>
     <div class='footer'>
