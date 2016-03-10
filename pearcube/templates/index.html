@@ -7,42 +7,48 @@
    <meta name="google-site-verification" content="LMX3N5lgfX8gHuLLimwryRGH5cmI5kee-CVWNQrJ328" />
 {% endblock %}
 
-{% block body %}
-  <div class='page-wrapper'>
-    <div class='title-box-2-wrapper'><div class='title-box-2'><img src='/static/images/darklogo.png'></div></div>
+{% macro one_product(p) -%}
+  <a class='product_image_wrapper' href='/{{p.page_url}}'>
+    <div class='product_category'>{{p.title_category}}</div>
+    <img class='product_image' src='/static/product_imgs/{{p.images.0}}'>
+    <div class='product_header_text'>{{p.manufacturer}} {{p.name}}</div>
+    <div class='product_price nowrap'>{{p.price | format_price}}{%if p.and_up%}+{%endif%}</div>
+  </a>
+{%- endmacro %}
 
-    <div class='content-div-wrapper'>
-      <div class='content-div'>
-        <div class='lead'>Online shopping is overwhelming.</div>
-        <div class='sub-lead'>We can help.</div>
-        <div class='left-content'>
-          <ul class='instructions'>
-            <li class='instruction'>Let us know what you're looking for</li>
-            <li class='instruction'>We’ll do the research and respond via email within 24 hours</li>
-            <li class='instruction'>
-              <a id='see-example-toggle' class='link' data-toggle="lightbox" href="#" onclick="return show_examples()">
-              See some examples
-              </a>
-            </li>
-          </ul>
-          <form id="cs-form" onsubmit="return send_cs_email()">
-            <div id="cs-form-div">
-              <textarea name='body' id="cs-form-ta" placeholder="I am looking for..."></textarea>
-              <div id="cs-form-row">
-                <input type="text" name='email_address' id="cs-form-in" placeholder="Email">
-                <span id="cs-form-btn-span">
-                  <button id="cs-form-btn" type="submit">Send</button>
-                </span>
-              </div>
+{% block body %}
+    <div class='content-div'>
+
+      <div id='frontpage_carousel_wrapper'>
+        <div class='frontpage_carousel_bumper frontpage_carousel_bumper_left' onclick='rotate_carousel(-1)'><i class="fa fa-chevron-left"></i></div>
+        <div id='frontpage_carousel'>
+        {% for product in products %}
+          {{one_product(product)}}
+        {% endfor %}
+        </div>
+        <div class='frontpage_carousel_bumper frontpage_carousel_bumper_right' onclick='rotate_carousel(1)'><i class="fa fa-chevron-right"></i></div>
+      </div>
+      <div class='left-content'>
+        <ul class='instructions'>
+          <li class='instruction'>Can't find what you're looking for?</li>
+          <li class='instruction'>Let us know and we'll find you the best option in 24 hours</li>
+        </ul>
+        <form id="cs-form" onsubmit="return send_cs_email()">
+          <div id="cs-form-div">
+            <textarea name='body' id="cs-form-ta" placeholder="I am looking for..."></textarea>
+            <div id="cs-form-row">
+              <input type="text" name='email_address' id="cs-form-in" placeholder="Email">
+              <span id="cs-form-btn-span">
+                <button id="cs-form-btn" type="submit">Send</button>
+              </span>
             </div>
-          </form>
-        </div>
-        <div class='right-content'>
-          <img src='/static/images/birdpackage2.png'>
-        </div>
+          </div>
+        </form>
+      </div>
+      <div class='right-content'>
+        <img src='/static/images/birdpackage2.png'>
       </div>
     </div>
-  </div>
 
   <div class="lightbox-overlay" onclick="hide_lightbox()">
     <div class='lightbox-content' id='example-popup'>

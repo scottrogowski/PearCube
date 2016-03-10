@@ -87,3 +87,26 @@ function send_cs_email() {
     email_send_lock = false;
     return false;
 }
+
+function rotate_carousel(direction) {
+    $('.product_image_wrapper').each(function ($el) {
+
+    })
+}
+
+function rotate_carousel(direction) {
+    fc = $('.product_image_wrapper:first-child');
+    lc = $('.product_image_wrapper:last-child');
+
+    if (direction == -1) {
+        lc.insertBefore(fc)
+    }
+    else {
+        fc.insertAfter(lc)
+    }
+    $('.product_image_wrapper:first-child').addClass('slow_hide')
+}
+
+$(document).ready(function() {
+    $('.product_image')
+})

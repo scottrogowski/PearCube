@@ -8,8 +8,10 @@ import premailer
 
 from lib.utils import absolute_path, unique_id
 from lib.options import options
+from lib.orm import sync_mongo_with_flatfile
 from lib.email_handler import send_request_email, send_results_email
-from lib.product_handler import render_product_page, sync_mongo_with_flatfile
+from lib.product_handler import render_product_page
+from lib.index_handler import render_index_page
 
 app = Flask(__name__)
 hash_version = unique_id()[:5]
@@ -62,7 +64,7 @@ def versioned_static(url):
 
 @app.route('/')
 def index_page():
-    return render_template('index.html')
+    return render_index_page()
 
 @app.route('/about')
 def about_page():

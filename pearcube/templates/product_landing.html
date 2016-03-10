@@ -25,39 +25,37 @@
 
 
 {% block body %}
-    <div class='content-div-wrapper'>
 
-    <div class='title-box-2-wrapper hr'><div class='title-box-2'><a href='{{ "/" | absolutify }}'><img class='logo-2' src='{{ "images/whitelogo.png" | versioned | absolutify }}'> <span style='font-size: 13px'>Only the best of everything</span></a></div></div>
 
-    <div class='product-wrapper'>
+    <div class='content-div'>
         <div class='product' id='sha'>
             <div class='product_category'>{{title_category}}</div>
-            <div class='product_image_div'>
-                <div class='product_image_wrapper'>
-                        <div class='product_header_text'><a href='{{buy_link}}'>{{manufacturer}} {{name}} - <span class='product_price nowrap'>{{price | format_price}}{%if and_up%}+{%endif%} from amazon</span></a></div>
-                                <div class='product_image_top'>
-                        {% if images|length > 1 %}
-                            <div class='product_image_bumper product_image_bumper_left' onclick='rotate_image(this, -1)'>&lt;</div>
-                        {% endif %}
-                        <a href='{{buy_link}}' class='product_image_link_wrapper'>
-                        {% for image in images %}
-                            <img class='product_image {{ "visible_image" if loop.first }}' src='/static/product_imgs/{{image}}'>
-                        {% endfor %}
-                        </a>
-                        {% if images|length > 1 %}
-                            <div class='product_image_bumper product_image_bumper_right' onclick="rotate_image(this, 1)">&gt;</div>
-                        {% endif %}
-                    </div>
+            <div class='product_image_wrapper'>
+                    <div class='product_header_text'><a href='{{buy_link}}'>{{manufacturer}} {{name}} - <span class='product_price nowrap'>{{price | format_price}}{%if and_up%}+{%endif%} from amazon</span></a></div>
+                            <div class='product_image_top'>
                     {% if images|length > 1 %}
-                        <div class='product_image_buttons_wrapper'>
-                            <div class='product_image_buttons'>
-                                {% for image in images %}
-                                    <span class='product_image_button {{ "selected_button" if loop.first }}' onclick='rotate_image_to(this, {{loop.index0}})'>•</span>
-                                {% endfor %}
-                            </div>
-                        </div>
+                        <div class='product_image_bumper product_image_bumper_left' onclick='rotate_image(this, -1)'><i class="fa fa-chevron-left"></i>
+</div>
+                    {% endif %}
+                    <a href='{{buy_link}}' class='product_image_link_wrapper'>
+                    {% for image in images %}
+                        <img class='product_image {{ "visible_image" if loop.first }}' src='/static/product_imgs/{{image}}'>
+                    {% endfor %}
+                    </a>
+                    {% if images|length > 1 %}
+                        <div class='product_image_bumper product_image_bumper_right' onclick="rotate_image(this, 1)"><i class="fa fa-chevron-right"></i>
+</div>
                     {% endif %}
                 </div>
+                {% if images|length > 1 %}
+                    <div class='product_image_buttons_wrapper'>
+                        <div class='product_image_buttons'>
+                            {% for image in images %}
+                                <span class='product_image_button {{ "selected_button" if loop.first }}' onclick='rotate_image_to(this, {{loop.index0}})'>•</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                {% endif %}
             </div>
 
             <div class='product_sub_header'>Features</div>
@@ -88,10 +86,6 @@
 
         </div>
     </div>
-    <div class='footer'>
-        <a href='/'>Home</a> | <a href='/about'>About</a> | <a href='/'>Finder</a>
-    </div>
-</div>
 
   <div class="lightbox-overlay" onclick="hide_lightbox()">
     <div class='lightbox-content' id='info-popup'>

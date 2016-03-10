@@ -10,8 +10,16 @@
     {% endblock %}
 </head>
 <body>
-{% block body %}
-{% endblock %}
+<div class='content-div-wrapper'>
+    <div class='title-box-2-wrapper hr'><div class='title-box-2'><a href='{{ "/" | absolutify }}'><img class='logo-2' src='{{ "images/whitelogo.png" | versioned | absolutify }}'> <span style='font-size: 13px'>Only the best of everything</span></a></div></div>
+
+    {% block body %}{% endblock %}
+
+    <div class='footer'>
+        <a href='/'>Home</a> | <a href='/about'>About</a> | <a href='mailto:scott@pearcube.com'>Contact</a>
+    </div>
+</div>
+
 
 {% block jquery %}
     {% if debug %}
