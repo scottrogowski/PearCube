@@ -3,7 +3,7 @@ $(document).ready(function() {
 });
 
 function add_tooltip_handlers() {
-    $('.fa').on('click', function () {
+    $('.tip').on('click', function () {
         var $el = $(this).parent()
         var question = $el.attr('data-question')
         var content = $el.attr('data-tip');

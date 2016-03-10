@@ -67,7 +67,9 @@ h1,h2,h3{
 }
 
 .left-content {
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
+    width: 520px;
 }
 
 .right-content {
@@ -226,6 +228,7 @@ h1,h2,h3{
     padding: 15px;
     border-radius: 1px;
     flex-grow: 1;
+    position: relative;
 }
 
 .product_image {
@@ -262,17 +265,6 @@ h1,h2,h3{
     margin-left: 10px;
 }
 
-@keyframes example {
-    0%   {background-color: red;}
-    100% {background-color: inherit;}
-}
-
-/* The element to apply the animation to */
-.slow_hide {
-    animation-name: example;
-    animation-duration: 1s;
-}
-
 @media only screen and (min-width: 500px) {
 
 
@@ -300,6 +292,7 @@ h1,h2,h3{
     .left-content {
         display: block;
         margin: 0 auto;
+        width: inherit;
     }
 
     .right-content {
