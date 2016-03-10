@@ -177,8 +177,8 @@ button, input, select, textarea {
 
 
 .product_image {
-    max-height: 350px;
-    max-width: 350px;
+    max-height: 300px;
+    max-width: 300px;
     display: none;
     margin: 10px auto;
 }

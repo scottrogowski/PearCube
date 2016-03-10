@@ -200,6 +200,7 @@ h1,h2,h3{
     overflow: hidden;
     white-space: nowrap;
     margin: auto;
+    text-align: center;
     /*text-align: left;*/
 }
 
@@ -234,7 +235,7 @@ h1,h2,h3{
 
     .instructions {
         margin-top: 20px;
-        font-size: 2.9vw;
+        font-size: 4.5vw;
         font-weight: bold;
     }
 
