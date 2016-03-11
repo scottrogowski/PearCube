@@ -1,4 +1,5 @@
 import json
+import random
 
 from flask import render_template
 
@@ -8,8 +9,9 @@ from utils import absolute_path, force_ascii, memoized
 @memoized
 def get_frontpage_products():
     db = get_db()
-    products = db.products.find(limit=9)
-    return list(products)
+    products = list(db.products.find())
+    random.shuffle(products)
+    return products
 
 def render_index_page():
     products = get_frontpage_products()

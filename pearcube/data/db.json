@@ -1,7 +1,7 @@
 [
     {
         "int_id": 1,
-        "title_category": "A Portable & Cheap Photo Scanner",
+        "title_category": "Best Portable & Cheap Photo Scanner",
         "manufacturer": "Fujitsu",
         "name": "SCANSNAP",
         "price": 96.0,
@@ -266,5 +266,145 @@
             "mrcoffee2.jpg"
         ]
 
+    },
+    {
+        "int_id": 7,
+        "title_category": "Best Laundry Detergent",
+        "manufacturer": "Tide",
+        "name": "Plus Bleach HE",
+        "price": 19.40,
+        "buy_link": "http://www.amazon.com/Tide-Bleach-Alternative-Laundry-Detergent/dp/B00JC60FR6",
+        "page_url": "Best-Laundry-Detergent",
+        "regular_speak": "laundry detergent",
+        "features": [
+            {
+                "feature": "HE or regular washers",
+                "tooltip": {
+                    "title": "What is a \"HE\" detergent?",
+                    "tip": "High efficiency detergents were developed at the same time as high efficiency washers. The idea was to provide the same level of cleaning with less suds-ing, which wasn't a problem in older machines. In HE machines, you can only use HE detergents but in regular machines, you can use either and expect that they will perform equally. [More here](http://laundry.about.com/od/laundrydetergents/f/hedetregmach.htm)"
+                }
+            },
+            {
+                "feature": "Good for 48 loads"
+            },
+            {
+                "feature": "Additional easy-to-use delay feature"
+            }
+        ],
+        "why_best": [
+            {
+                "feature": "Tide plus bleach HE was ranked the best detergent by this [article comparing 29 different detergents](http://thesweethome.com/reviews/the-best-laundry-detergent)"
+            },
+            {
+                "feature": "A tide brand has ranked at or near the top of the [annual consumer reports survey](http://www.consumerreports.org/cro/laundry-detergents.htm) for the past several years"
+            }
+        ],
+        "images": [
+            "tide1.jpg"
+        ]
+    },
+    {
+        "int_id": 8,
+        "title_category": "Best Camping Stove",
+        "manufacturer": "Jetboil",
+        "name": "Zip",
+        "price": 66.24,
+        "buy_link": "http://www.amazon.com/Jetboil-Zip-Personal-Cooking-System/dp/B004XCD3ZU",
+        "page_url": "Best-Camping-Stove",
+        "regular_speak": "camping stove",
+        "features": [
+            {
+                "feature": "Boils 2 cups of water in 3 minutes (about 50 cups per 100g fuel can)"
+            },
+            {
+                "feature": "Meant only for boiling water which is good for many [backpacker meals](http://www.backpackerspantry.com/)"
+            },
+            {
+                "feature": "For continuous boil, [an attachment](http://www.amazon.com/Jetboil-Pot-Support/dp/B00U2NCTJU) is available"
+            },
+            {
+                "feature": "12 ounces for the system without fuel can"
+            }
+        ],
+        "why_best": [
+            {
+                "feature": "It's really nice to not wait long for boiling water at the end of a hard day backpacking"
+            }
+        ],
+        "images": [
+            "jetboil.jpg"
+        ]
+    },
+    {
+        "int_id": 9,
+        "title_category": "Best Commuter Bicycle",
+        "manufacturer": "Trek",
+        "name": "FX 7.x line",
+        "price": 439.99,
+        "and_up": true,
+        "buy_link": "http://www.trekbikes.com/us/en_US/bikes/city-bikes/fitness-bikes/c/B420",
+        "page_url": "Best-Commuter-Bicycle",
+        "regular_speak": "commuter bicycle",
+        "features": [
+            {
+                "feature": "Hybrid-style bicycle is easy to ride in the city but has wider tires for occasional off-roading"
+            },
+            {
+                "feature": "Flat handlebars for stability"
+            },
+            {
+                "feature": "Easy riding position"
+            },
+            {
+                "feature": "As the line gets more expensive, the bicycles get increasingly lighter and stronger. For a good middle-of-the line choice, try the [FX 7.3](http://www.trekbikes.com/us/en_US/bikes/city-bikes/fitness-bikes/fx/7-3-fx/p/1327010-2016)"
+            }
+
+        ],
+        "why_best": [
+            {
+                "feature": "The trek fx line gets [good reviews](http://www.roadbikereview.com/cat/latest-bikes/hybrid-bike/trek/7-2-fx/prd_411303_5672crx.aspx)"
+            },
+            {
+                "feature": "The founder of Pearcube has had two for over 10 years and can personally recommend this as a solid, fast, reliable bike"
+            }
+        ],
+        "images": [
+            "trek1.jpg"
+        ]
+    },
+    {
+        "int_id": 9,
+        "title_category": "Best Black & White Film",
+        "manufacturer": "Ilford",
+        "name": "HP5 Plus",
+        "price": 8.55,
+        "buy_link": "http://www.amazon.com/Ilford-1574577-Black-White-Exposures/dp/B00009V3CG",
+        "page_url": "Best-Black-And-White-Film",
+        "regular_speak": "black and white film",
+        "features": [
+            {
+                "feature": "35 mm"
+            },
+            {
+                "feature": "ISO 400"
+            },
+            {
+                "feature": "Photos come out beautifully"
+            }
+        ],
+        "why_best": [
+            {
+                "feature": "Finding the \"best\" film is going to be largely subjective. That being said, we've found a lot of success with Ilford films and would recommend them to anyone taking the plunge into analog photography"
+            },
+            {
+                "feature": "This film is loved by [others](http://www.photographyreview.com/cat/film/black-and-white-film/ilford/hp5-plus/prd_83276_3119crx.aspx) too!"
+            }
+
+        ],
+        "images": [
+            "ilford1.jpg",
+            "ilford2.jpg"
+        ]
     }
+
 ]

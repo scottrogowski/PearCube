@@ -72,7 +72,7 @@ h1,h2,h3{
     margin-bottom: 0;
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
     padding: 6px 12px;
-    height: 4em;
+    height: 7em;
 }
 
 #cs-form-row {
@@ -195,8 +195,8 @@ h1,h2,h3{
 }
 
 .product_category, .product_header_text, .product_price {
-    font-size: 16px;
-    line-height: 1.1em;
+    font-size: 15px;
+    line-height: 1.2em;
     overflow: hidden;
     white-space: nowrap;
     margin: auto;

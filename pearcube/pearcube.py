@@ -5,6 +5,7 @@ import re
 from flask import Flask, request, render_template, redirect
 from werkzeug.routing import BaseConverter
 import premailer
+from tld import get_tld
 
 from lib.utils import absolute_path, unique_id
 from lib.options import options
@@ -57,10 +58,9 @@ def remove_dash_filter(url):
 def versioned_static(url):
     return "/static/" + url + "?v=" + hash_version
 
-# @app.route('/static/<regex("[a-f0-9]{5}"):hash_version>/<path:static_path>')
-# def debug_redirect_static(hash_version, static_path):
-#     print 'here'
-#     return redirect('/static/' + static_path)
+@app.template_filter('vendor')
+def vendor_filter(url):
+    return get_tld(url).split('.')[0]
 
 @app.route('/')
 def index_page():
